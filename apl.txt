@@ -1,0 +1,77 @@
+consider us in a window if
+    the hunt window is in progress
+    elysian decree window is in progress
+    soul carver without fiery demise window is in progress
+    fiery demise with soul carver window is in progress
+    fiery demise without soul carver window is in progress
+
+actions+=/variable,name=sub_apl_in_progress,value=
+    variable.the_hunt_ramp_in_progress
+    |variable.elysian_decree_ramp_in_progress
+    |variable.soul_carver_ramp_in_progress
+    |variable.fiery_demise_with_soul_carver_in_progress
+    |variable.fiery_demise_without_soul_carver_in_progress
+
+actions+=/variable,name=sub_apl_in_progress,value=variable.the_hunt_ramp_in_progress|variable.elysian_decree_ramp_in_progress|variable.soul_carver_ramp_in_progress|variable.fiery_demise_with_soul_carver_in_progress|variable.fiery_demise_without_soul_carver_in_progress
+
+consider us in a the hunt window if
+    the hunt is talented
+        the hunt is off cooldown within 10s
+            we are not already in a window
+consider us not in a the hunt window if
+    the hunt is talented
+        the hunt is on cooldown longer than 10s
+
+actions+=/variable,name=the_hunt_ramp_in_progress,value=1,if=
+    talent.the_hunt.enabled
+        &cooldown.the_hunt.remains<=10
+            &!variable.sub_apl_in_progress
+actions+=/variable,name=the_hunt_ramp_in_progress,value=0,if=
+    talent.the_hunt.enabled
+        &cooldown.the_hunt.remains>10
+
+actions+=/variable,name=the_hunt_ramp_in_progress,value=1,if=talent.the_hunt.enabled&cooldown.the_hunt.remains<=10&!variable.sub_apl_in_progress
+actions+=/variable,name=the_hunt_ramp_in_progress,value=0,if=talent.the_hunt.enabled&cooldown.the_hunt.remains>10
+
+consider us in a elysian decree window if
+    elysian decree is talented
+        elysian decree is off cooldown within 10s
+            we are not already in a window
+consider us not in a elysian decree window if
+    elysian decree is talented
+        elysian decree is on cooldown longer than 10s
+
+actions+=/variable,name=elysian_decree_ramp_in_progress,value=1,if=
+    talent.elysian_decree.enabled
+        &cooldown.elysian_decree.remains<=10
+            &!variable.sub_apl_in_progress
+actions+=/variable,name=elysian_decree_ramp_in_progress,value=0,if=
+    talent.elysian_decree.enabled
+        &cooldown.elysian_decree.remains>10
+
+actions+=/variable,name=elysian_decree_ramp_in_progress,value=1,if=talent.elysian_decree.enabled&cooldown.elysian_decree.remains<=10&!variable.sub_apl_in_progress
+actions+=/variable,name=elysian_decree_ramp_in_progress,value=0,if=talent.elysian_decree.enabled&cooldown.elysian_decree.remains>10
+
+consider us in a soul carver without fiery demise window if
+    soul carver is talented
+        fiery demise is not talented
+            soul carver is off cooldown within 10s
+                we are not already in a window
+consider us not in a soul carver without fiery demise window if
+    soul carver is talented
+        fiery demise is not talented
+            soul carver is on cooldown longer than 10s
+
+actions+=/variable,name=soul_carver_ramp_in_progress,value=1,if=
+    talent.soul_carver.enabled
+        &!talent.fiery_demise.enabled
+            &cooldown.soul_carver.remains<=10
+                &!variable.sub_apl_in_progress
+actions+=/variable,name=soul_carver_ramp_in_progress,value=0,if=
+    talent.soul_carver.enabled
+        &!talent.fiery_demise.enabled
+            &cooldown.soul_carver.remains>10
+
+actions+=/variable,name=soul_carver_ramp_in_progress,value=1,if=talent.soul_carver.enabled&!talent.fiery_demise.enabled&cooldown.soul_carver.remains<=10&!variable.sub_apl_in_progress
+actions+=/variable,name=soul_carver_ramp_in_progress,value=0,if=talent.soul_carver.enabled&!talent.fiery_demise.enabled&cooldown.soul_carver.remains>10
+
