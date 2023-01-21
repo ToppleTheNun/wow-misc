@@ -1,0 +1,149 @@
+###############
+# Default APL #
+###############
+
+before combat, define "spirit bomb soul fragments not in meta requirement" as:
+    4 if fracture is talented
+    5 otherwise
+before combat, define "spirit bomb soul fragments in meta requirement" as:
+    3 if fracture is talented
+    4 otherwise
+
+define "spirit bomb soul fragments requirement" as:
+    "spirit bomb soul fragments in meta requirement" if metamorphosis is active
+    "spirit bomb soul fragments not in meta requirement" otherwise
+define "frailty target requirement" as:
+    5 if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    6 otherwise
+define "frailty dump fury requirement" as:
+    1 SpB fury cost + 2 SC fury cost if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    3 SC fury cost otherwise
+cast spirit bomb if:
+    available soul fragments are greater than or equal to "spirit bomb soul fragments requirement" and
+        spirit bomb can hit more than 1 target
+cast soul cleave if:
+    available soul fragments are less than or equal to 1 and
+        soul cleave can hit more than 1 target
+    or soul cleave can hit less than 2 targets
+cast immolation aura if:
+    fury deficit is greater than or equal to 10 and
+        fiery demise is talented and
+            soul carver is talented and
+                soul carver is on cooldown for longer than 15s
+            or soul carver is not talented
+        or fiery demise is not talented
+cast sigil of flame
+cast fracture
+cast shear
+cast throw glaive
+cast felblade
+
+#################################
+# Default APL plus translations #
+#################################
+
+before combat, define "spirit bomb soul fragments not in meta requirement" as:
+    4 if fracture is talented
+    5 otherwise
+
+actions.precombat+=/variable,name=spirit_bomb_soul_fragments_not_in_meta,op=setif,value=4,value_else=5,condition=talent.fracture.enabled
+
+
+before combat, define "spirit bomb soul fragments in meta requirement" as:
+    3 if fracture is talented
+    4 otherwise
+
+actions.precombat+=/variable,name=spirit_bomb_soul_fragments_in_meta,op=setif,value=3,value_else=4,condition=talent.fracture.enabled
+
+
+define "spirit bomb soul fragments requirement" as:
+    "spirit bomb soul fragments in meta requirement" if metamorphosis is active
+    "spirit bomb soul fragments not in meta requirement" otherwise
+
+actions+=/variable,name=spirit_bomb_soul_fragments,op=setif,value=variable.spirit_bomb_soul_fragments_in_meta,value_else=variable.spirit_bomb_soul_fragments_not_in_meta,condition=buff.metamorphosis.up
+
+
+define "frailty target requirement" as:
+    5 if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    6 otherwise
+
+actions+=/variable,name=frailty_target_requirement,op=setif,value=5,value_else=6,condition=spell_targets.spirit_bomb>1|spell_targets.soul_cleave>1
+
+
+define "frailty dump fury requirement" as:
+    1 SpB fury cost + 2 SC fury cost if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    3 SC fury cost otherwise
+
+actions+=/variable,name=frailty_dump_fury_requirement,op=setif,value=action.spirit_bomb.cost+(action.soul_cleave.cost*2),value_else=action.soul_cleave.cost*3,condition=spell_targets.spirit_bomb>1|spell_targets.soul_cleave
+
+
+cast spirit bomb if:
+    available soul fragments are greater than or equal to "spirit bomb soul fragments requirement"
+        and spirit bomb can hit more than 1 target
+
+actions+=/spirit_bomb,if=soul_fragments>=variable.spirit_bomb_soul_fragments&spell_targets>1
+
+
+cast soul cleave if:
+    available soul fragments are less than or equal to 1
+        and soul cleave can hit more than 1 target
+    or soul cleave can hit less than 2 targets
+
+actions+=/soul_cleave,if=soul_fragments<=1&spell_targets>1|spell_targets<2
+
+
+cast immolation aura if:
+    fury deficit is greater than or equal to 10 and
+        fiery demise is talented and
+            soul carver is talented and
+                soul carver is on cooldown for longer than 15s
+            or soul carver is not talented
+        or fiery demise is not talented
+
+actions+=/immolation_aura,if=
+    fury.deficit>=10
+        &(
+            (talent.fiery_demise.enabled
+                &(talent.soul_carver.enabled
+                    &cooldown.soul_carver.remains>10)
+                |!talent.soul_carver.enabled)
+            |!talent.fiery_demise.enabled)
+
+actions+=/immolation_aura,if=fury.deficit>=10&((talent.fiery_demise.enabled&(talent.soul_carver.enabled&cooldown.soul_carver.remains>10)|!talent.soul_carver.enabled)|!talent.fiery_demise.enabled)
+
+
+cast sigil of flame
+
+actions+=/sigil_of_flame
+
+
+cast fracture
+
+actions+=/fracture
+
+
+cast shear
+
+actions+=/shear
+
+
+cast throw glaive
+
+actions+=/throw_glaive
+
+
+cast felblade
+
+actions+=/felblade
