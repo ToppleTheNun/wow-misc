@@ -1,0 +1,186 @@
+######################
+# Elysian Decree APL #
+######################
+
+before combat, define "spirit bomb soul fragments not in meta requirement" as:
+    4 if fracture is talented
+    5 otherwise
+before combat, define "spirit bomb soul fragments in meta requirement" as:
+    3 if fracture is talented
+    4 otherwise
+
+define "spirit bomb soul fragments requirement" as:
+    "spirit bomb soul fragments in meta requirement" if metamorphosis is active
+    "spirit bomb soul fragments not in meta requirement" otherwise
+define "frailty target requirement" as:
+    5 if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    6 otherwise
+define "frailty dump fury requirement" as:
+    1 SpB fury cost + 2 SC fury cost if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    3 SC fury cost otherwise
+define "pooling for elysian decree" as:
+    true if:
+        elysian decree is talented and
+            elysian decree comes off cooldown within 2 gcds and
+                available fury is less than "frailty dump fury requirement" and
+                    target has less than or equal to 1 stack of frailty
+    false otherwise
+define "pooling fury" as:
+    true if:
+        "pooling for elysian decree"
+    false otherwise
+cast elysian decree if:
+    target has greater than or equal to "frailty target requirement"
+cast spirit bomb if:
+    not "pooling fury" and
+        available soul fragments is greater than or equal to "spirit bomb soul fragments requirement" and
+            spirit bomb can hit more than 1 target
+cast soul cleave if:
+    not "pooling fury" and
+        available soul fragments are less than or equal to 1 and
+            soul cleave can hit more than 1 target
+        or soul cleave can hit less than 2 targets
+cast sigil of flame
+cast fracture
+cast shear
+cast throw glaive
+cast felblade
+
+########################################
+# Elysian Decree APL plus translations #
+########################################
+
+before combat, define "spirit bomb soul fragments not in meta requirement" as:
+    4 if fracture is talented
+    5 otherwise
+
+actions.precombat+=/variable,name=spirit_bomb_soul_fragments_not_in_meta,op=setif,value=4,value_else=5,condition=talent.fracture.enabled
+
+
+before combat, define "spirit bomb soul fragments in meta requirement" as:
+    3 if fracture is talented
+    4 otherwise
+
+actions.precombat+=/variable,name=spirit_bomb_soul_fragments_in_meta,op=setif,value=3,value_else=4,condition=talent.fracture.enabled
+
+
+define "spirit bomb soul fragments requirement" as:
+    "spirit bomb soul fragments in meta requirement" if metamorphosis is active
+    "spirit bomb soul fragments not in meta requirement" otherwise
+
+actions+=/variable,name=spirit_bomb_soul_fragments,op=setif,value=variable.spirit_bomb_soul_fragments_in_meta,value_else=variable.spirit_bomb_soul_fragments_not_in_meta,condition=buff.metamorphosis.up
+
+
+define "frailty target requirement" as:
+    5 if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    6 otherwise
+
+action+=/variable,name=frailty_target_requirement,op=setif,value=5,value_else=6,condition=spell_targets.spirit_bomb>1|spell_targets.soul_cleave>1
+
+
+define "frailty dump fury requirement" as:
+    1 SpB fury cost + 2 SC fury cost if:
+        spirit bomb is talented and
+            spirit bomb can hit more than 1 target
+        or soul cleave can hit more than 1 target
+    3 SC fury cost otherwise
+
+actions+=/variable,name=frailty_dump_fury_requirement,op=setif,value=action.spirit_bomb.cost+(action.soul_cleave.cost*2),value_else=action.soul_cleave.cost*3,condition=spell_targets.spirit_bomb>1|spell_targets.soul_cleave
+
+
+define "pooling for elysian decree" as:
+    true if:
+        elysian decree is talented and
+            elysian decree comes off cooldown within 2 gcds and
+                available fury is less than "frailty dump fury requirement" and
+                    target has less than or equal to 1 stack of frailty
+    false otherwise
+
+actions+=/variable,name=pooling_for_elysian_decree,value=
+    talent.elysian_decree.enabled
+        &cooldown.elysian_decree.remains<(gcd.max*2)
+            &fury<variable.frailty_dump_fury_requirement
+                &debuff.frailty.stack<=1
+
+actions+=/variable,name=pooling_for_elysian_decree,value=talent.elysian_decree.enabled&cooldown.elysian_decree.remains<(gcd.max*2)&fury<variable.frailty_dump_fury_requirement&debuff.frailty.stack<=1
+
+
+define "pooling fury" as:
+    true if:
+        "pooling for elysian decree"
+    false otherwise
+
+actions+=/variable,name=pooling_for_elysian_decree,value=
+    variable.pooling_for_elysian_decree
+
+actions+=/variable,name=pooling_for_elysian_decree,value=variable.pooling_for_elysian_decree
+
+
+cast elysian decree if:
+    target has greater than or equal to "frailty target requirement"
+
+actions.elysian_decree_ramp=elysian_decree,if=
+    debuff.frailty.stack>=variable.frailty_target_requirement
+
+actions.elysian_decree_ramp=elysian_decree,if=debuff.frailty.stack>=variable.frailty_target_requirement
+
+
+cast spirit bomb if:
+    not "pooling fury" and
+        available soul fragments is greater than or equal to "spirit bomb soul fragments requirement" and
+            spirit bomb can hit more than 1 target
+
+actions.elysian_decree_ramp+=/spirit_bomb,if=
+    !variable.pooling_fury
+        &soul_fragments>=variable.spirit_bomb_soul_fragments
+            &spell_targets>1
+
+actions.elysian_decree_ramp+=/spirit_bomb,if=!variable.pooling_fury&soul_fragments>=variable.spirit_bomb_soul_fragments&spell_targets>1
+
+
+cast soul cleave if:
+    not "pooling fury" and
+        available soul fragments are less than or equal to 1 and
+            soul cleave can hit more than 1 target
+        or soul cleave can hit less than 2 targets
+
+actions.elysian_decree_ramp+=/soul_cleave,if=
+    !variable.pooling_fury
+        &(
+            (soul_fragments<=1
+                &spell_targets>1)
+            |spell_targets<2)
+
+
+cast sigil of flame
+
+actions.elysian_decree_ramp+=/sigil_of_flame
+
+
+cast fracture
+
+actions.elysian_decree_ramp+=/fracture
+
+
+cast shear
+
+actions.elysian_decree_ramp+=/shear
+
+
+cast throw glaive
+
+actions.elysian_decree_ramp+=/throw_glaive
+
+
+cast felblade
+
+actions.elysian_decree_ramp+=/felblade
