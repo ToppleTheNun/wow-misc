@@ -119,10 +119,10 @@ define "pooling fury" as:
         "pooling for elysian decree"
     false otherwise
 
-actions+=/variable,name=pooling_for_elysian_decree,value=
+actions+=/variable,name=pooling_fury,value=
     variable.pooling_for_elysian_decree
 
-actions+=/variable,name=pooling_for_elysian_decree,value=variable.pooling_for_elysian_decree
+actions+=/variable,name=pooling_fury,value=variable.pooling_for_elysian_decree
 
 
 cast elysian decree if:

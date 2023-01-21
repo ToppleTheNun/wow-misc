@@ -119,10 +119,10 @@ define "pooling fury" as:
         "pooling for soul carver"
     false otherwise
 
-actions+=/variable,name=pooling_for_soul_carver,value=
+actions+=/variable,name=pooling_fury,value=
     variable.pooling_for_soul_carver
 
-actions+=/variable,name=pooling_for_soul_carver,value=variable.pooling_for_soul_carver
+actions+=/variable,name=pooling_fury,value=variable.pooling_for_soul_carver
 
 
 cast soul carver if:

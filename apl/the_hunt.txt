@@ -119,10 +119,10 @@ define "pooling fury" as:
         "pooling for the hunt"
     false otherwise
 
-actions+=/variable,name=pooling_for_the_hunt,value=
+actions+=/variable,name=pooling_fury,value=
     variable.pooling_for_the_hunt
 
-actions+=/variable,name=pooling_for_the_hunt,value=variable.pooling_for_the_hunt
+actions+=/variable,name=pooling_fury,value=variable.pooling_for_the_hunt
 
 
 cast the hunt if:
