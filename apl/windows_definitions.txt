@@ -6,8 +6,7 @@ consider us in a sub apl if:
     the hunt window is in progress
     or elysian decree window is in progress
     or soul carver without fiery demise window is in progress
-    or fiery demise with soul carver window is in progress
-    or fiery demise without soul carver window is in progress
+    or fiery demise window is in progress
 consider us in a the hunt window if:
     the hunt is talented and
         the hunt is off cooldown within 10s and
@@ -59,16 +58,15 @@ consider us in a sub apl if:
     or elysian decree window is in progress
     or soul carver without fiery demise window is in progress
     or fiery demise with soul carver window is in progress
-    or fiery demise without soul carver window is in progress
+    or fiery demise window is in progress
 
 actions+=/variable,name=sub_apl_in_progress,value=
     variable.the_hunt_ramp_in_progress
     |variable.elysian_decree_ramp_in_progress
     |variable.soul_carver_ramp_in_progress
-    |variable.fiery_demise_with_soul_carver_in_progress
-    |variable.fiery_demise_without_soul_carver_in_progress
+    |variable.fiery_demise_in_progress
 
-actions+=/variable,name=sub_apl_in_progress,value=variable.the_hunt_ramp_in_progress|variable.elysian_decree_ramp_in_progress|variable.soul_carver_ramp_in_progress|variable.fiery_demise_with_soul_carver_in_progress|variable.fiery_demise_without_soul_carver_in_progress
+actions+=/variable,name=sub_apl_in_progress,value=variable.the_hunt_ramp_in_progress|variable.elysian_decree_ramp_in_progress|variable.soul_carver_ramp_in_progress|variable.fiery_demise_in_progress
 
 
 consider us in a the hunt window if:
