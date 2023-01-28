@@ -16,13 +16,11 @@ define "frailty target requirement" as:
     5 if:
         spirit bomb is talented and
             spirit bomb can hit more than 1 target
-        or soul cleave can hit more than 1 target
     6 otherwise
 define "frailty dump fury requirement" as:
     1 SpB fury cost + 2 SC fury cost if:
         spirit bomb is talented and
             spirit bomb can hit more than 1 target
-        or soul cleave can hit more than 1 target
     3 SC fury cost otherwise
 define "pooling for soul carver" as:
     true if:
@@ -81,20 +79,17 @@ define "frailty target requirement" as:
     5 if:
         spirit bomb is talented and
             spirit bomb can hit more than 1 target
-        or soul cleave can hit more than 1 target
     6 otherwise
 
-action+=/variable,name=frailty_target_requirement,op=setif,value=5,value_else=6,condition=spell_targets.spirit_bomb>1|spell_targets.soul_cleave>1
-
+action+=/variable,name=frailty_target_requirement,op=setif,value=5,value_else=6,condition=spell_targets.spirit_bomb>1
 
 define "frailty dump fury requirement" as:
     1 SpB fury cost + 2 SC fury cost if:
         spirit bomb is talented and
             spirit bomb can hit more than 1 target
-        or soul cleave can hit more than 1 target
     3 SC fury cost otherwise
 
-actions+=/variable,name=frailty_dump_fury_requirement,op=setif,value=action.spirit_bomb.cost+(action.soul_cleave.cost*2),value_else=action.soul_cleave.cost*3,condition=spell_targets.spirit_bomb>1|spell_targets.soul_cleave
+actions+=/variable,name=frailty_dump_fury_requirement,op=setif,value=action.spirit_bomb.cost+(action.soul_cleave.cost*2),value_else=action.soul_cleave.cost*3,condition=spell_targets.spirit_bomb>1
 
 
 define "pooling for soul carver" as:
