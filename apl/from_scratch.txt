@@ -197,9 +197,12 @@ actions.precombat+=/immolation_aura,if=active_enemies=1|!talent.fallout
 
 actions=/auto_attack
 actions+=/disrupt,if=target.debuff.casting.react
+actions+=/infernal_strike,use_off_gcd=1
+actions+=/demon_spikes,use_off_gcd=1,if=!buff.demon_spikes.up&!cooldown.pause_action.remains
 actions+=/metamorphosis
 actions+=/fel_devastation,if=!talent.fiery_demise.enabled
 actions+=/fiery_brand,if=!talent.fiery_demise.enabled&!dot.fiery_brand.ticking
+actions+=/bulk_extraction
 actions+=/potion
 actions+=/use_item,slot=trinket1
 actions+=/use_item,slot=trinket2
