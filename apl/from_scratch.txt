@@ -1,0 +1,233 @@
+################
+# From Scratch #
+################
+
+before combat, use a flask
+before combat, eat food
+before combat, use augmentation rune
+
+before combat, define "Spirit Bomb Soul Fragments not in Metamorphosis requirement" as:
+    4 if Fracture is talented
+    5 otherwise
+before combat, define "Spirit Bomb Soul Fragments in Metamorphosis requirement" as:
+    3 if Fracture is talented
+    4 otherwise
+before combat, define "Vulnerability Frailty stack" as:
+    1 if Vulnerability is talented
+    0 otherwise
+before combat, define "Cooldown single target Frailty requirement" as:
+    6 * "Vulnerability Frailty stack" if Soulcrush is talented
+    "Vulnerability Frailty stack" otherwise
+before combat, define "Cooldown AoE Frailty requirement" as:
+    5 * "Vulnerability Frailty stack" if Soulcrush is talented
+    "Vulnerability Frailty stack" otherwise
+
+before combat, snapshot stats
+
+before combat, cast Sigil of Flame
+
+before combat, cast Immolation Aura if:
+    active enemies is equal to 1
+    or active enemies is greater than 1 and
+        Fallout is not talented
+
+auto attack
+
+disrupt if:
+    target is casting
+
+cast Metamorphosis
+
+cast Fel Devastation if:
+    Fel Devastation is talented and
+        Fiery Demise is not talented
+
+cast Fiery Brand if:
+    Fiery Brand is talented and
+        Fiery Demise is not talented and
+            Fiery Brand is not ticking on the target
+
+use combat potion
+
+use Trinket 1
+
+use Trinket 2
+
+define "The Hunt is on cooldown" as:
+    The Hunt is talented and
+        The Hunt has time remaining on its cooldown
+    or The Hunt is not talented
+
+define "Elysian Decree is on cooldown" as:
+    Elysian Decree is talented and
+        Elysian Decree has time remaining on its cooldown
+    or Elysian Decree is not talented
+
+define "Soul Carver is on cooldown" as:
+    Soul Carver is talented and
+        Soul Carver has time remaining on its cooldown
+    or Soul Carver is not talented
+
+define "Fel Devastation is on cooldown" as:
+    Fel Devastation is talented and
+        Fel Devastation has time remaining on its cooldown
+    or Fel Devastation is not talented
+
+define "Fiery Demise Fiery Brand is ticking on current target" as:
+    Fiery Brand is talented and
+        Fiery Demise is talented and
+            Fiery Brand is ticking on the target
+
+define "Fiery Demise Fiery Brand is not ticking on current target" as:
+    Fiery Brand is talented and
+        Fiery Demise is talented and
+            Fiery Brand is not ticking on the target
+        or Fiery Demise is not talented
+
+define "Fiery Demise Fiery Brand is ticking on any target" as:
+    Fiery Brand is talented and
+        Fiery Demise is talented and
+            Fiery Brand is ticking on any target
+
+define "Fiery Demise Fiery Brand is not ticking on any target" as:
+    Fiery Brand is talented and
+        Fiery Demise is talented and
+            Fiery Brand is not ticking on any target
+        or Fiery Demise is not talented
+
+define "Spirit Bomb Soul Fragments requirement" as:
+    "Spirit Bomb Soul Fragments in Metamorphosis requirement" if Metamorphosis is active
+    "Spirit Bomb Soul Fragments not in Metamorphosis requirement" otherwise
+
+define "Cooldown Frailty requirement" as:
+    "Cooldown AoE Frailty requirement" if Spirit Bomb is talented and
+        Spirit Bomb can hit more than 1 target
+        or "Fiery Demise Fiery Brand is ticking on any target"
+    "Cooldown single target Frailty requirement" otherwise
+
+cast The Hunt if:
+    The Hunt is talented and
+        "Fiery Demise Fiery Brand is not ticking on any target" and
+            stacks of Frailty on target are greater than "Cooldown Frailty requirement"
+
+cast Elysian Decree if:
+    Elysian Decree is talented and
+        "Fiery Demise Fiery Brand is not ticking on any target" and
+            stacks of Frailty on target are greater than "Cooldown Frailty requirement"
+
+cast Soul Carver if:
+    Soul Carver is talented and
+        Fiery Demise is not talented and
+            less than 3 Soul Fragments are available and
+                stacks of Frailty on target are greater than "Cooldown Frailty requirement"
+
+cast Soul Carver if:
+    Soul Carver is talented and
+        "Fiery Demise Fiery Brand is ticking on current target" and
+            less than 3 Soul Fragments are available and
+                stacks of Frailty on target are greater than "Cooldown Frailty requirement"
+
+cast Fel Devastation if:
+    Fel Devastation is talented and
+        "Fiery Demise Fiery Brand is ticking on current target" and
+            less than 3s remain on Fiery Brand on the target
+
+cast Fiery Brand if:
+    Fiery Brand is talented and
+        "Fiery Demise Fiery Brand is not ticking on any target" and
+            The Hunt is on cooldown and
+                Elysian Decree is on cooldown and
+                    Soul Carver is talented and
+                        Soul Carver is off cooldown
+                        or Soul Carver is off cooldown within 10s
+                    or Fel Devastation is talented and
+                        Fel Devastation is off cooldown
+                        or Fel Devastation is off cooldown within 10s
+
+cast Immolation Aura if:
+    Fiery Demise is talented and
+        Fiery Brand is ticking on any target
+
+cast Sigil of Flame if:
+    Fiery Demise is talented and
+        Fiery Brand is ticking on any target
+
+cast Spirit Bomb if:
+    available Soul Fragments are greater than or equal to "Spirit Bomb Soul Fragments requirement" and
+        can hit more than one target
+        or Fiery Demise is talented and
+            Fiery Brand is ticking on any target
+
+cast Soul Cleave if:
+    available Soul Fragments are less than or equal to 1 and
+        can hit more than 1 target
+    or can hit 1 target
+
+cast Immolation Aura
+
+cast Sigil of Flame
+
+cast Fracture
+
+cast Shear
+
+cast Throw Glaive
+
+cast Felblade
+
+################################
+# From Scratch TCI Definitions #
+################################
+
+# Executed before combat begins. Accepts non-harmful actions only.
+actions.precombat=flask
+actions.precombat+=/augmentation
+actions.precombat+=/food
+
+actions.precombat+=/variable,name=spirit_bomb_soul_fragments_not_in_meta,op=setif,value=4,value_else=5,condition=talent.fracture
+actions.precombat+=/variable,name=spirit_bomb_soul_fragments_in_meta,op=setif,value=3,value_else=4,condition=talent.fracture
+actions.precombat+=/variable,name=vulnerability_frailty_stack,op=setif,value=1,value_else=0,condition=talent.vulnerability
+actions.precombat+=/variable,name=cooldown_frailty_requirement_st,op=setif,value=6*variable.vulnerability_frailty_stack,value_else=variable.vulnerability_frailty_stack,condition=talent.soulcrush
+actions.precombat+=/variable,name=cooldown_frailty_requirement_aoe,op=setif,value=6*variable.vulnerability_frailty_stack,value_else=variable.vulnerability_frailty_stack,condition=talent.soulcrush
+
+# Snapshot raid buffed stats before combat begins and pre-potting is done.
+actions.precombat+=/snapshot_stats
+actions.precombat+=/sigil_of_flame
+actions.precombat+=/immolation_aura,if=active_enemies=1|!talent.fallout
+
+actions=/auto_attack
+actions+=/disrupt,if=target.debuff.casting.react
+actions+=/metamorphosis
+actions+=/fel_devastation,if=!talent.fiery_demise.enabled
+actions+=/fiery_brand,if=!talent.fiery_demise.enabled&!dot.fiery_brand.ticking
+actions+=/potion
+actions+=/use_item,slot=trinket1
+actions+=/use_item,slot=trinket2
+
+actions+=/variable,name=the_hunt_on_cooldown,value=talent.the_hunt&cooldown.the_hunt.remains|!talent.the_hunt
+actions+=/variable,name=elysian_decree_on_cooldown,value=talent.elysian_decree&cooldown.elysian_decree.remains|!talent.elysian_decree
+actions+=/variable,name=soul_carver_on_cooldown,value=talent.soul_carver&cooldown.soul_carver.remains|!talent.soul_carver
+actions+=/variable,name=fel_devastation_on_cooldown,value=talent.fel_devastation&cooldown.fel_devastation.remains|!talent.fel_devastation
+actions+=/variable,name=fiery_demise_fiery_brand_is_ticking_on_current_target,value=talent.fiery_brand&talent.fiery_demise&dot.fiery_brand.ticking
+actions+=/variable,name=fiery_demise_fiery_brand_is_not_ticking_on_current_target,value=talent.fiery_brand&((talent.fiery_demise&dot.fiery_brand.ticking)|!talent.fiery_demise)
+actions+=/variable,name=fiery_demise_fiery_brand_is_ticking_on_any_target,value=talent.fiery_brand&talent.fiery_demise&active_dot.fiery_brand_dot
+actions+=/variable,name=fiery_demise_fiery_brand_is_not_ticking_on_any_target,value=talent.fiery_brand&((talent.fiery_demise&active_dot.fiery_brand_dot)|!talent.fiery_demise)
+actions+=/variable,name=spirit_bomb_soul_fragments,op=setif,value=variable.spirit_bomb_soul_fragments_in_meta,value_else=variable.spirit_bomb_soul_fragments_not_in_meta,condition=buff.metamorphosis.up
+actions+=/variable,name=cooldown_frailty_requirement,op=setif,value=variable.cooldown_frailty_requirement_aoe,value_else=variable.cooldown_frailty_requirement_st,condition=talent.spirit_bomb&(spell_targets.spirit_bomb>1|variable.fiery_demise_fiery_brand_is_ticking_on_any_target)
+
+actions+=/the_hunt,if=variable.fiery_demise_fiery_brand_is_not_ticking_on_current_target&debuff.frailty.stack>=variable.cooldown_frailty_requirement
+actions+=/elysian_decree,if=variable.fiery_demise_fiery_brand_is_not_ticking_on_current_target&debuff.frailty.stack>=variable.cooldown_frailty_requirement
+actions+=/soul_carver,if=!talent.fiery_demise&soul_fragments<=3&debuff.frailty.stack>=variable.cooldown_frailty_requirement
+actions+=/soul_carver,if=variable.fiery_demise_fiery_brand_is_ticking_on_current_target&soul_fragments<=3&debuff.frailty.stack>=variable.cooldown_frailty_requirement
+actions+=/fel_devastation,if=variable.fiery_demise_fiery_brand_is_ticking_on_current_target&dot.fiery_brand.remains<3
+actions+=/fiery_brand,if=variable.fiery_demise_fiery_brand_is_not_ticking_on_any_target&variable.the_hunt_on_cooldown&variable.elysian_decree_on_cooldown&((talent.soul_carver&(cooldown.soul_carver.up|cooldown.soul_carver.remains<10))|(talent.fel_devastation&(cooldown.fel_devastation.up|cooldown.fel_devastation.remains<10)))
+actions+=/immolation_aura,if=talent.fiery_demise&variable.fiery_demise_fiery_brand_is_ticking_on_any_target
+actions+=/sigil_of_flame,if=talent.fiery_demise&variable.fiery_demise_fiery_brand_is_ticking_on_any_target
+actions+=/spirit_bomb,if=soul_fragments>=variable.spirit_bomb_soul_fragments&(spell_targets>1|variable.fiery_demise_fiery_brand_is_ticking_on_any_target)
+actions+=/soul_cleave,if=(soul_fragments<=1&spell_targets>1)|spell_targets=1
+actions+=/sigil_of_flame
+actions+=/immolation_aura
+actions+=/fracture
+actions+=/shear
+actions+=/throw_glaive
+actions+=/felblade
