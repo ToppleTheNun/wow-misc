@@ -79,7 +79,7 @@ define "Fiery Demise Fiery Brand is ticking on current target" as:
             Fiery Brand is ticking on the target
 
 define "Fiery Demise Fiery Brand is not ticking on current target" as:
-    Fiery Brand is talented and
+    Fiery Brand is talented and:
         Fiery Demise is talented and
             Fiery Brand is not ticking on the target
         or Fiery Demise is not talented
@@ -90,7 +90,7 @@ define "Fiery Demise Fiery Brand is ticking on any target" as:
             Fiery Brand is ticking on any target
 
 define "Fiery Demise Fiery Brand is not ticking on any target" as:
-    Fiery Brand is talented and
+    Fiery Brand is talented and:
         Fiery Demise is talented and
             Fiery Brand is not ticking on any target
         or Fiery Demise is not talented
@@ -100,7 +100,7 @@ define "Spirit Bomb Soul Fragments requirement" as:
     "Spirit Bomb Soul Fragments not in Metamorphosis requirement" otherwise
 
 define "Cooldown Frailty requirement" as:
-    "Cooldown AoE Frailty requirement" if Spirit Bomb is talented and
+    "Cooldown AoE Frailty requirement" if Spirit Bomb is talented and:
         Spirit Bomb can hit more than 1 target
         or "Fiery Demise Fiery Brand is ticking on any target"
     "Cooldown single target Frailty requirement" otherwise
@@ -137,10 +137,10 @@ cast Fiery Brand if:
         "Fiery Demise Fiery Brand is not ticking on any target" and
             The Hunt is on cooldown and
                 Elysian Decree is on cooldown and
-                    Soul Carver is talented and
+                    Soul Carver is talented and:
                         Soul Carver is off cooldown
                         or Soul Carver is off cooldown within 10s
-                    or Fel Devastation is talented and
+                    or Fel Devastation is talented and:
                         Fel Devastation is off cooldown
                         or Fel Devastation is off cooldown within 10s
 
