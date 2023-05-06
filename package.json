@@ -1,5 +1,6 @@
 {
   "name": "@topplethenun/wow-misc",
+  "packageManager": "pnpm@8.4.0",
   "private": "true",
   "type": "module",
   "dependencies": {
