@@ -1,4 +1,11 @@
-const gear = {
+import { writeFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+import { type Gear, printCombinations } from "./utils/combinations";
+
+const __filename = fileURLToPath(import.meta.url);
+
+const gear: Gear = {
   "Elementium Pocket Anvil":
     "trinket1=elementium_pocket_anvil,id=202617,bonus_id=4800/4786/1498",
   "Dragonfire Bomb Dispenser":
@@ -24,37 +31,6 @@ const gear = {
   "Heart of Thunder": "trinket1=heart_of_thunder,id=133246,ilevel=447",
 };
 
-const keys = Object.keys(gear);
-
-const combinationUtil = (arr, combos, startIdx, endIdx, curIdx, size) => {
-  if (curIdx === size) {
-    const pieces = [];
-    for (let j = 0; j < size; j++) {
-      pieces.push(combos[j]);
-    }
-
-    const gearNames = [...pieces].join("/");
-    const gearStrings = pieces
-      .map(
-        (piece, idx) =>
-          `profileset."${gearNames}"+=${gear[piece].replace(
-            "trinket1",
-            idx === 0 ? "trinket1" : "trinket2"
-          )}`
-      )
-      .join("\n");
-    console.log(`${gearStrings}\n`);
-  }
-
-  for (let i = startIdx; i <= endIdx && endIdx - i + 1 >= size - curIdx; i++) {
-    combos[curIdx] = arr[i];
-    combinationUtil(arr, combos, i + 1, endIdx, curIdx + 1, size);
-  }
-};
-const printCombinations = (arr, size) => {
-  const n = arr.length;
-  const combos = new Array(size);
-  combinationUtil(arr, combos, 0, n - 1, 0, size);
-};
-
-printCombinations(keys, 2);
+writeFileSync(__filename.replace(".ts", ".simc"), printCombinations(gear, 2), {
+  encoding: "utf-8",
+});

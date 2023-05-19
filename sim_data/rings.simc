@@ -1,0 +1,18 @@
+profileset."Seal of Diurna's Chosen/Onyx Annulet"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen/Onyx Annulet"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+
+profileset."Seal of Diurna's Chosen/Onyx Impostor's Birthright"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen/Onyx Impostor's Birthright"+=finger1=onyx_impostors_birthright,id=204398,enchant_id=6556,ilevel=450
+
+profileset."Seal of Diurna's Chosen/Shard of Titanic Insight"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen/Shard of Titanic Insight"+=finger1=,id=192999,crafted_stats=32/36,ilevel=447
+
+profileset."Onyx Annulet/Onyx Impostor's Birthright"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Onyx Impostor's Birthright"+=finger1=onyx_impostors_birthright,id=204398,enchant_id=6556,ilevel=450
+
+profileset."Onyx Annulet/Shard of Titanic Insight"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Shard of Titanic Insight"+=finger1=,id=192999,crafted_stats=32/36,ilevel=447
+
+profileset."Onyx Impostor's Birthright/Shard of Titanic Insight"+=finger1=onyx_impostors_birthright,id=204398,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright/Shard of Titanic Insight"+=finger1=,id=192999,crafted_stats=32/36,ilevel=447
+
