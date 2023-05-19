@@ -19,7 +19,9 @@ const gear = {
   "Manic Grieftorch":
     "trinket1=manic_grieftorch,id=194308,bonus_id=7981/6652/1498/8767",
   "Heroic Storm-Eater's Boon": "trinket1=stormeaters_boon,id=194302,ilevel=408",
-  "Drogbar Rocks": "trinket1=drogbar_rocks,id=204810,ilevel=411",
+  "Drogbar Rocks (411)": "trinket1=drogbar_rocks,id=204810,ilevel=411",
+  "Drogbar Rocks (437)": "trinket1=drogbar_rocks,id=204810,ilevel=437",
+  "Heart of Thunder": "trinket1=heart_of_thunder,id=133246,ilevel=447",
 };
 
 const keys = Object.keys(gear);
