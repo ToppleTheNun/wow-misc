@@ -29,6 +29,8 @@ const gear: Gear = {
   "Drogbar Rocks (411)": "trinket1=drogbar_rocks,id=204810,ilevel=411",
   "Drogbar Rocks (437)": "trinket1=drogbar_rocks,id=204810,ilevel=437",
   "Heart of Thunder": "trinket1=heart_of_thunder,id=133246,ilevel=447",
+  "The Hungerer": "trinket1=the_hungerer,id=171642,ilevel=437",
+  "Matrix Restabilizer": "trinket1=matrix_restabilizer,id=171646,ilevel=437",
 };
 
 writeFileSync(__filename.replace(".ts", ".simc"), printCombinations(gear, 2), {

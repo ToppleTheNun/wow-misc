@@ -40,6 +40,12 @@ profileset."Elementium Pocket Anvil/Drogbar Rocks (437)"+=trinket2=drogbar_rocks
 profileset."Elementium Pocket Anvil/Heart of Thunder"+=trinket1=elementium_pocket_anvil,id=202617,bonus_id=4800/4786/1498
 profileset."Elementium Pocket Anvil/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Elementium Pocket Anvil/The Hungerer"+=trinket1=elementium_pocket_anvil,id=202617,bonus_id=4800/4786/1498
+profileset."Elementium Pocket Anvil/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Elementium Pocket Anvil/Matrix Restabilizer"+=trinket1=elementium_pocket_anvil,id=202617,bonus_id=4800/4786/1498
+profileset."Elementium Pocket Anvil/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Dragonfire Bomb Dispenser/Screaming Black Dragonscale"+=trinket1=dragonfire_bomb_dispenser,id=202610,bonus_id=4800/4786/1498
 profileset."Dragonfire Bomb Dispenser/Screaming Black Dragonscale"+=trinket2=screaming_black_dragonscale,id=202612,bonus_id=4800/4786/1498
 
@@ -79,6 +85,12 @@ profileset."Dragonfire Bomb Dispenser/Drogbar Rocks (437)"+=trinket2=drogbar_roc
 profileset."Dragonfire Bomb Dispenser/Heart of Thunder"+=trinket1=dragonfire_bomb_dispenser,id=202610,bonus_id=4800/4786/1498
 profileset."Dragonfire Bomb Dispenser/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Dragonfire Bomb Dispenser/The Hungerer"+=trinket1=dragonfire_bomb_dispenser,id=202610,bonus_id=4800/4786/1498
+profileset."Dragonfire Bomb Dispenser/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Dragonfire Bomb Dispenser/Matrix Restabilizer"+=trinket1=dragonfire_bomb_dispenser,id=202610,bonus_id=4800/4786/1498
+profileset."Dragonfire Bomb Dispenser/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Screaming Black Dragonscale/Beacon to the Beyond"+=trinket1=screaming_black_dragonscale,id=202612,bonus_id=4800/4786/1498
 profileset."Screaming Black Dragonscale/Beacon to the Beyond"+=trinket2=beacon_to_the_beyond,id=203963,bonus_id=4800/4786/1498
 
@@ -115,6 +127,12 @@ profileset."Screaming Black Dragonscale/Drogbar Rocks (437)"+=trinket2=drogbar_r
 profileset."Screaming Black Dragonscale/Heart of Thunder"+=trinket1=screaming_black_dragonscale,id=202612,bonus_id=4800/4786/1498
 profileset."Screaming Black Dragonscale/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Screaming Black Dragonscale/The Hungerer"+=trinket1=screaming_black_dragonscale,id=202612,bonus_id=4800/4786/1498
+profileset."Screaming Black Dragonscale/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Screaming Black Dragonscale/Matrix Restabilizer"+=trinket1=screaming_black_dragonscale,id=202612,bonus_id=4800/4786/1498
+profileset."Screaming Black Dragonscale/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Beacon to the Beyond/Neltharion's Call to Chaos"+=trinket1=beacon_to_the_beyond,id=203963,bonus_id=4800/4786/1498
 profileset."Beacon to the Beyond/Neltharion's Call to Chaos"+=trinket2=neltharions_call_to_chaos,id=204201,bonus_id=4800/4786/1498
 
@@ -148,6 +166,12 @@ profileset."Beacon to the Beyond/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id
 profileset."Beacon to the Beyond/Heart of Thunder"+=trinket1=beacon_to_the_beyond,id=203963,bonus_id=4800/4786/1498
 profileset."Beacon to the Beyond/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Beacon to the Beyond/The Hungerer"+=trinket1=beacon_to_the_beyond,id=203963,bonus_id=4800/4786/1498
+profileset."Beacon to the Beyond/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Beacon to the Beyond/Matrix Restabilizer"+=trinket1=beacon_to_the_beyond,id=203963,bonus_id=4800/4786/1498
+profileset."Beacon to the Beyond/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Neltharion's Call to Chaos/Mark of Dargrul"+=trinket1=neltharions_call_to_chaos,id=204201,bonus_id=4800/4786/1498
 profileset."Neltharion's Call to Chaos/Mark of Dargrul"+=trinket2=mark_of_dargrul,id=137357,ilevel=447
 
@@ -178,6 +202,12 @@ profileset."Neltharion's Call to Chaos/Drogbar Rocks (437)"+=trinket2=drogbar_ro
 profileset."Neltharion's Call to Chaos/Heart of Thunder"+=trinket1=neltharions_call_to_chaos,id=204201,bonus_id=4800/4786/1498
 profileset."Neltharion's Call to Chaos/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Neltharion's Call to Chaos/The Hungerer"+=trinket1=neltharions_call_to_chaos,id=204201,bonus_id=4800/4786/1498
+profileset."Neltharion's Call to Chaos/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Neltharion's Call to Chaos/Matrix Restabilizer"+=trinket1=neltharions_call_to_chaos,id=204201,bonus_id=4800/4786/1498
+profileset."Neltharion's Call to Chaos/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Mark of Dargrul/Lingering Sporepods"+=trinket1=mark_of_dargrul,id=137357,ilevel=447
 profileset."Mark of Dargrul/Lingering Sporepods"+=trinket2=lingering_sporepods,id=159626,ilevel=447
 
@@ -205,6 +235,12 @@ profileset."Mark of Dargrul/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id=2048
 profileset."Mark of Dargrul/Heart of Thunder"+=trinket1=mark_of_dargrul,id=137357,ilevel=447
 profileset."Mark of Dargrul/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Mark of Dargrul/The Hungerer"+=trinket1=mark_of_dargrul,id=137357,ilevel=447
+profileset."Mark of Dargrul/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Mark of Dargrul/Matrix Restabilizer"+=trinket1=mark_of_dargrul,id=137357,ilevel=447
+profileset."Mark of Dargrul/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Lingering Sporepods/Harlan's Loaded Dice"+=trinket1=lingering_sporepods,id=159626,ilevel=447
 profileset."Lingering Sporepods/Harlan's Loaded Dice"+=trinket2=harlans_loaded_dice,id=155881,ilevel=447
 
@@ -229,6 +265,12 @@ profileset."Lingering Sporepods/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id=
 profileset."Lingering Sporepods/Heart of Thunder"+=trinket1=lingering_sporepods,id=159626,ilevel=447
 profileset."Lingering Sporepods/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Lingering Sporepods/The Hungerer"+=trinket1=lingering_sporepods,id=159626,ilevel=447
+profileset."Lingering Sporepods/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Lingering Sporepods/Matrix Restabilizer"+=trinket1=lingering_sporepods,id=159626,ilevel=447
+profileset."Lingering Sporepods/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Harlan's Loaded Dice/Igneous Flowstone"+=trinket1=harlans_loaded_dice,id=155881,ilevel=447
 profileset."Harlan's Loaded Dice/Igneous Flowstone"+=trinket2=igneous_flowstone,id=203996,bonus_id=4800/4786/1498
 
@@ -250,6 +292,12 @@ profileset."Harlan's Loaded Dice/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id
 profileset."Harlan's Loaded Dice/Heart of Thunder"+=trinket1=harlans_loaded_dice,id=155881,ilevel=447
 profileset."Harlan's Loaded Dice/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Harlan's Loaded Dice/The Hungerer"+=trinket1=harlans_loaded_dice,id=155881,ilevel=447
+profileset."Harlan's Loaded Dice/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Harlan's Loaded Dice/Matrix Restabilizer"+=trinket1=harlans_loaded_dice,id=155881,ilevel=447
+profileset."Harlan's Loaded Dice/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Igneous Flowstone/Storm-Eater's Boon"+=trinket1=igneous_flowstone,id=203996,bonus_id=4800/4786/1498
 profileset."Igneous Flowstone/Storm-Eater's Boon"+=trinket2=stormeaters_boon,id=194302,bonus_id=6652/7981/1498/8767
 
@@ -268,6 +316,12 @@ profileset."Igneous Flowstone/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id=20
 profileset."Igneous Flowstone/Heart of Thunder"+=trinket1=igneous_flowstone,id=203996,bonus_id=4800/4786/1498
 profileset."Igneous Flowstone/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Igneous Flowstone/The Hungerer"+=trinket1=igneous_flowstone,id=203996,bonus_id=4800/4786/1498
+profileset."Igneous Flowstone/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Igneous Flowstone/Matrix Restabilizer"+=trinket1=igneous_flowstone,id=203996,bonus_id=4800/4786/1498
+profileset."Igneous Flowstone/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Storm-Eater's Boon/Manic Grieftorch"+=trinket1=stormeaters_boon,id=194302,bonus_id=6652/7981/1498/8767
 profileset."Storm-Eater's Boon/Manic Grieftorch"+=trinket2=manic_grieftorch,id=194308,bonus_id=7981/6652/1498/8767
 
@@ -283,6 +337,12 @@ profileset."Storm-Eater's Boon/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id=2
 profileset."Storm-Eater's Boon/Heart of Thunder"+=trinket1=stormeaters_boon,id=194302,bonus_id=6652/7981/1498/8767
 profileset."Storm-Eater's Boon/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Storm-Eater's Boon/The Hungerer"+=trinket1=stormeaters_boon,id=194302,bonus_id=6652/7981/1498/8767
+profileset."Storm-Eater's Boon/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Storm-Eater's Boon/Matrix Restabilizer"+=trinket1=stormeaters_boon,id=194302,bonus_id=6652/7981/1498/8767
+profileset."Storm-Eater's Boon/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Manic Grieftorch/Heroic Storm-Eater's Boon"+=trinket1=manic_grieftorch,id=194308,bonus_id=7981/6652/1498/8767
 profileset."Manic Grieftorch/Heroic Storm-Eater's Boon"+=trinket2=stormeaters_boon,id=194302,ilevel=408
 
@@ -295,6 +355,12 @@ profileset."Manic Grieftorch/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id=204
 profileset."Manic Grieftorch/Heart of Thunder"+=trinket1=manic_grieftorch,id=194308,bonus_id=7981/6652/1498/8767
 profileset."Manic Grieftorch/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Manic Grieftorch/The Hungerer"+=trinket1=manic_grieftorch,id=194308,bonus_id=7981/6652/1498/8767
+profileset."Manic Grieftorch/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Manic Grieftorch/Matrix Restabilizer"+=trinket1=manic_grieftorch,id=194308,bonus_id=7981/6652/1498/8767
+profileset."Manic Grieftorch/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Heroic Storm-Eater's Boon/Drogbar Rocks (411)"+=trinket1=stormeaters_boon,id=194302,ilevel=408
 profileset."Heroic Storm-Eater's Boon/Drogbar Rocks (411)"+=trinket2=drogbar_rocks,id=204810,ilevel=411
 
@@ -304,12 +370,39 @@ profileset."Heroic Storm-Eater's Boon/Drogbar Rocks (437)"+=trinket2=drogbar_roc
 profileset."Heroic Storm-Eater's Boon/Heart of Thunder"+=trinket1=stormeaters_boon,id=194302,ilevel=408
 profileset."Heroic Storm-Eater's Boon/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Heroic Storm-Eater's Boon/The Hungerer"+=trinket1=stormeaters_boon,id=194302,ilevel=408
+profileset."Heroic Storm-Eater's Boon/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Heroic Storm-Eater's Boon/Matrix Restabilizer"+=trinket1=stormeaters_boon,id=194302,ilevel=408
+profileset."Heroic Storm-Eater's Boon/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Drogbar Rocks (411)/Drogbar Rocks (437)"+=trinket1=drogbar_rocks,id=204810,ilevel=411
 profileset."Drogbar Rocks (411)/Drogbar Rocks (437)"+=trinket2=drogbar_rocks,id=204810,ilevel=437
 
 profileset."Drogbar Rocks (411)/Heart of Thunder"+=trinket1=drogbar_rocks,id=204810,ilevel=411
 profileset."Drogbar Rocks (411)/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
 
+profileset."Drogbar Rocks (411)/The Hungerer"+=trinket1=drogbar_rocks,id=204810,ilevel=411
+profileset."Drogbar Rocks (411)/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Drogbar Rocks (411)/Matrix Restabilizer"+=trinket1=drogbar_rocks,id=204810,ilevel=411
+profileset."Drogbar Rocks (411)/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
 profileset."Drogbar Rocks (437)/Heart of Thunder"+=trinket1=drogbar_rocks,id=204810,ilevel=437
 profileset."Drogbar Rocks (437)/Heart of Thunder"+=trinket2=heart_of_thunder,id=133246,ilevel=447
+
+profileset."Drogbar Rocks (437)/The Hungerer"+=trinket1=drogbar_rocks,id=204810,ilevel=437
+profileset."Drogbar Rocks (437)/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Drogbar Rocks (437)/Matrix Restabilizer"+=trinket1=drogbar_rocks,id=204810,ilevel=437
+profileset."Drogbar Rocks (437)/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
+profileset."Heart of Thunder/The Hungerer"+=trinket1=heart_of_thunder,id=133246,ilevel=447
+profileset."Heart of Thunder/The Hungerer"+=trinket2=the_hungerer,id=171642,ilevel=437
+
+profileset."Heart of Thunder/Matrix Restabilizer"+=trinket1=heart_of_thunder,id=133246,ilevel=447
+profileset."Heart of Thunder/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
+
+profileset."The Hungerer/Matrix Restabilizer"+=trinket1=the_hungerer,id=171642,ilevel=437
+profileset."The Hungerer/Matrix Restabilizer"+=trinket2=matrix_restabilizer,id=171646,ilevel=437
 
