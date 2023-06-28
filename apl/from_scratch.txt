@@ -49,6 +49,12 @@ cast Fiery Brand if:
 
 use combat potion
 
+use Dragonfire Bomb Dispenser off-GCD if:
+    less than 20 remains in the right
+    or there are 3 charges available
+
+use Elementium Pocket Anvil off-GCD
+
 use Trinket 1
 
 use Trinket 2
@@ -205,6 +211,8 @@ actions+=/fel_devastation,if=!talent.fiery_demise.enabled
 actions+=/fiery_brand,if=!talent.fiery_demise.enabled&!dot.fiery_brand.ticking
 actions+=/bulk_extraction
 actions+=/potion
+actions+=/use_item,name=dragonfire_bomb_dispenser,use_off_gcd=1,if=fight_remains<20|charges=3
+actions+=/use_item,name=elementium_pocket_anvil,use_off_gcd=1
 actions+=/use_item,slot=trinket1
 actions+=/use_item,slot=trinket2
 

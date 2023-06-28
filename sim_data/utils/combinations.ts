@@ -1,5 +1,13 @@
 export type Gear = Record<string, string>;
 
+const replaceParts =
+  (gearNames: string, gear: Gear) =>
+  (piece: string, idx: number): string =>
+    `profileset."${gearNames}"+=${gear[piece]}`
+      .replace("trinket1", idx === 0 ? "trinket1" : "trinket2")
+      .replace("finger1", idx === 0 ? "finger1" : "finger2")
+      .replace("main_hand", idx === 0 ? "main_hand" : "off_hand");
+
 export const combinationUtil = (
   gear: Gear,
   keys: string[],
@@ -12,21 +20,16 @@ export const combinationUtil = (
   let output = "";
 
   if (curIdx === size) {
-    const pieces = [];
+    const pieces: string[] = [];
     for (let j = 0; j < size; j++) {
-      pieces.push(combos[j]);
+      const piece = combos[j];
+      if (piece) {
+        pieces.push(piece);
+      }
     }
 
     const gearNames = [...pieces].join("/");
-    const gearStrings = pieces
-      .map(
-        (piece, idx) =>
-          `profileset."${gearNames}"+=${gear[piece].replace(
-            "trinket1",
-            idx === 0 ? "trinket1" : "trinket2"
-          )}`
-      )
-      .join("\n");
+    const gearStrings = pieces.map(replaceParts(gearNames, gear)).join("\n");
     output += `${gearStrings}\n\n`;
   }
 
