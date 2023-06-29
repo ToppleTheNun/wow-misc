@@ -15,24 +15,25 @@ const gear: Gear = {
   "Shard of Titanic Insight":
     "finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447",
   "Band of the Wyrm Matron":
-    "finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447",
   "Loop of Vitriolic Intent":
-    "finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447",
   "Seal of Questionable Loyalties":
-    "finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=",
+    "finger1=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447",
   "Loop of Pulsing Veins":
-    "finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447",
   "Bloodied Wedding Ring":
-    "finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447",
   "Circle of Ascended Frost":
-    "finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447",
   "Scalebane Signet":
-    "finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447",
   "Eternal Sentry's Ring":
-    "finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447",
-  "Skyshard Ring": "finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447",
+  "Skyshard Ring":
+    "finger1=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447",
   "Ring of Frozen Rain":
-    "finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447",
+    "finger1=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447",
 };
 
 writeFileSync(__filename.replace(".ts", ".simc"), printCombinations(gear, 2), {

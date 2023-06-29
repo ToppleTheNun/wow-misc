@@ -14,7 +14,7 @@ profileset."Seal of Diurna's Chosen (M)/Loop of Vitriolic Intent"+=finger1=seal_
 profileset."Seal of Diurna's Chosen (M)/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Seal of Diurna's Chosen (M)/Seal of Questionable Loyalties"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
-profileset."Seal of Diurna's Chosen (M)/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Diurna's Chosen (M)/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Seal of Diurna's Chosen (M)/Loop of Pulsing Veins"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
 profileset."Seal of Diurna's Chosen (M)/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
@@ -50,7 +50,7 @@ profileset."Onyx Annulet/Loop of Vitriolic Intent"+=finger1=onyx_annulet,id=2034
 profileset."Onyx Annulet/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Onyx Annulet/Seal of Questionable Loyalties"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
-profileset."Onyx Annulet/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Onyx Annulet/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Onyx Annulet/Loop of Pulsing Veins"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
 profileset."Onyx Annulet/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
@@ -83,7 +83,7 @@ profileset."Onyx Impostor's Birthright (M)/Loop of Vitriolic Intent"+=finger1=on
 profileset."Onyx Impostor's Birthright (M)/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Onyx Impostor's Birthright (M)/Seal of Questionable Loyalties"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
-profileset."Onyx Impostor's Birthright (M)/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Onyx Impostor's Birthright (M)/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Onyx Impostor's Birthright (M)/Loop of Pulsing Veins"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
 profileset."Onyx Impostor's Birthright (M)/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
@@ -113,7 +113,7 @@ profileset."Shard of Titanic Insight/Loop of Vitriolic Intent"+=finger1=,id=1929
 profileset."Shard of Titanic Insight/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Shard of Titanic Insight/Seal of Questionable Loyalties"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
-profileset."Shard of Titanic Insight/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Shard of Titanic Insight/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Shard of Titanic Insight/Loop of Pulsing Veins"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Shard of Titanic Insight/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
@@ -140,7 +140,7 @@ profileset."Band of the Wyrm Matron/Loop of Vitriolic Intent"+=finger=,id=134524
 profileset."Band of the Wyrm Matron/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Band of the Wyrm Matron/Seal of Questionable Loyalties"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
-profileset."Band of the Wyrm Matron/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Band of the Wyrm Matron/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Band of the Wyrm Matron/Loop of Pulsing Veins"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Band of the Wyrm Matron/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
@@ -164,7 +164,7 @@ profileset."Band of the Wyrm Matron/Ring of Frozen Rain"+=finger=,id=134524,,gem
 profileset."Band of the Wyrm Matron/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Loop of Vitriolic Intent/Seal of Questionable Loyalties"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
-profileset."Loop of Vitriolic Intent/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Loop of Vitriolic Intent/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Loop of Vitriolic Intent/Loop of Pulsing Veins"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Loop of Vitriolic Intent/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
@@ -187,25 +187,25 @@ profileset."Loop of Vitriolic Intent/Skyshard Ring"+=finger=,id=206184,gem_id=19
 profileset."Loop of Vitriolic Intent/Ring of Frozen Rain"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Loop of Vitriolic Intent/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Loop of Pulsing Veins"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Loop of Pulsing Veins"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Bloodied Wedding Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Bloodied Wedding Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Circle of Ascended Frost"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Circle of Ascended Frost"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Scalebane Signet"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Scalebane Signet"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Eternal Sentry's Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Eternal Sentry's Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Skyshard Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Skyshard Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Seal of Questionable Loyalties/Ring of Frozen Rain"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Ring of Frozen Rain"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=447
 profileset."Seal of Questionable Loyalties/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
 
 profileset."Loop of Pulsing Veins/Bloodied Wedding Ring"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
