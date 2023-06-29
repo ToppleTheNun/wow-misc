@@ -1,18 +1,273 @@
-profileset."Seal of Diurna's Chosen/Onyx Annulet"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
-profileset."Seal of Diurna's Chosen/Onyx Annulet"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Onyx Annulet"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Onyx Annulet"+=finger2=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
 
-profileset."Seal of Diurna's Chosen/Onyx Impostor's Birthright"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
-profileset."Seal of Diurna's Chosen/Onyx Impostor's Birthright"+=finger1=onyx_impostors_birthright,id=204398,enchant_id=6556,ilevel=450
+profileset."Seal of Diurna's Chosen (M)/Onyx Impostor's Birthright (M)"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Onyx Impostor's Birthright (M)"+=finger2=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
 
-profileset."Seal of Diurna's Chosen/Shard of Titanic Insight"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
-profileset."Seal of Diurna's Chosen/Shard of Titanic Insight"+=finger1=,id=192999,crafted_stats=32/36,ilevel=447
+profileset."Seal of Diurna's Chosen (M)/Shard of Titanic Insight"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Shard of Titanic Insight"+=finger2=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Onyx Annulet/Onyx Impostor's Birthright"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
-profileset."Onyx Annulet/Onyx Impostor's Birthright"+=finger1=onyx_impostors_birthright,id=204398,enchant_id=6556,ilevel=450
+profileset."Seal of Diurna's Chosen (M)/Band of the Wyrm Matron"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Band of the Wyrm Matron"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Loop of Vitriolic Intent"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Seal of Questionable Loyalties"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+
+profileset."Seal of Diurna's Chosen (M)/Loop of Pulsing Veins"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Bloodied Wedding Ring"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Circle of Ascended Frost"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Scalebane Signet"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Eternal Sentry's Ring"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Skyshard Ring"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Diurna's Chosen (M)/Ring of Frozen Rain"+=finger1=seal_of_diurnas_chosen,id=195480,bonus_id=4800/4786/1498,gem_id=192952,enchant_id=6556
+profileset."Seal of Diurna's Chosen (M)/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Onyx Impostor's Birthright (M)"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Onyx Impostor's Birthright (M)"+=finger2=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
 
 profileset."Onyx Annulet/Shard of Titanic Insight"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
-profileset."Onyx Annulet/Shard of Titanic Insight"+=finger1=,id=192999,crafted_stats=32/36,ilevel=447
+profileset."Onyx Annulet/Shard of Titanic Insight"+=finger2=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
 
-profileset."Onyx Impostor's Birthright/Shard of Titanic Insight"+=finger1=onyx_impostors_birthright,id=204398,enchant_id=6556,ilevel=450
-profileset."Onyx Impostor's Birthright/Shard of Titanic Insight"+=finger1=,id=192999,crafted_stats=32/36,ilevel=447
+profileset."Onyx Annulet/Band of the Wyrm Matron"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Band of the Wyrm Matron"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Loop of Vitriolic Intent"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Seal of Questionable Loyalties"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+
+profileset."Onyx Annulet/Loop of Pulsing Veins"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Bloodied Wedding Ring"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Circle of Ascended Frost"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Scalebane Signet"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Eternal Sentry's Ring"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Skyshard Ring"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Annulet/Ring of Frozen Rain"+=finger1=onyx_annulet,id=203460,bonus_id=1491,gem_id=204011/204027/204029,gem_bonus_id=9369:1472/9369:1472/9369:1472,enchant_id=6556
+profileset."Onyx Annulet/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Shard of Titanic Insight"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Shard of Titanic Insight"+=finger2=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Band of the Wyrm Matron"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Band of the Wyrm Matron"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Loop of Vitriolic Intent"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Seal of Questionable Loyalties"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+
+profileset."Onyx Impostor's Birthright (M)/Loop of Pulsing Veins"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Bloodied Wedding Ring"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Circle of Ascended Frost"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Scalebane Signet"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Eternal Sentry's Ring"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Skyshard Ring"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Onyx Impostor's Birthright (M)/Ring of Frozen Rain"+=finger1=onyx_impostors_birthright,id=204398,gem_id=192952,enchant_id=6556,ilevel=450
+profileset."Onyx Impostor's Birthright (M)/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Band of the Wyrm Matron"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Band of the Wyrm Matron"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Loop of Vitriolic Intent"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Seal of Questionable Loyalties"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+
+profileset."Shard of Titanic Insight/Loop of Pulsing Veins"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Bloodied Wedding Ring"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Circle of Ascended Frost"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Scalebane Signet"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Eternal Sentry's Ring"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Skyshard Ring"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Shard of Titanic Insight/Ring of Frozen Rain"+=finger1=,id=192999,crafted_stats=32/36,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Shard of Titanic Insight/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Loop of Vitriolic Intent"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Loop of Vitriolic Intent"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Seal of Questionable Loyalties"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+
+profileset."Band of the Wyrm Matron/Loop of Pulsing Veins"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Bloodied Wedding Ring"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Circle of Ascended Frost"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Scalebane Signet"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Eternal Sentry's Ring"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Skyshard Ring"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Band of the Wyrm Matron/Ring of Frozen Rain"+=finger=,id=134524,,gem_id=192952,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Band of the Wyrm Matron/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Seal of Questionable Loyalties"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Seal of Questionable Loyalties"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+
+profileset."Loop of Vitriolic Intent/Loop of Pulsing Veins"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Bloodied Wedding Ring"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Circle of Ascended Frost"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Scalebane Signet"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Eternal Sentry's Ring"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Skyshard Ring"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Vitriolic Intent/Ring of Frozen Rain"+=finger=,id=134530,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Vitriolic Intent/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Loop of Pulsing Veins"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Loop of Pulsing Veins"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Bloodied Wedding Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Circle of Ascended Frost"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Scalebane Signet"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Eternal Sentry's Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Skyshard Ring"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Seal of Questionable Loyalties/Ring of Frozen Rain"+=finger=,id=158314,gem_id=192952,enchant_id=6556,ilevel=
+profileset."Seal of Questionable Loyalties/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Pulsing Veins/Bloodied Wedding Ring"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Pulsing Veins/Bloodied Wedding Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Pulsing Veins/Circle of Ascended Frost"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Pulsing Veins/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Pulsing Veins/Scalebane Signet"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Pulsing Veins/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Pulsing Veins/Eternal Sentry's Ring"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Pulsing Veins/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Pulsing Veins/Skyshard Ring"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Pulsing Veins/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Loop of Pulsing Veins/Ring of Frozen Rain"+=finger=,id=159463,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Loop of Pulsing Veins/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Bloodied Wedding Ring/Circle of Ascended Frost"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Bloodied Wedding Ring/Circle of Ascended Frost"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Bloodied Wedding Ring/Scalebane Signet"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Bloodied Wedding Ring/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Bloodied Wedding Ring/Eternal Sentry's Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Bloodied Wedding Ring/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Bloodied Wedding Ring/Skyshard Ring"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Bloodied Wedding Ring/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Bloodied Wedding Ring/Ring of Frozen Rain"+=finger=,id=193671,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Bloodied Wedding Ring/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Circle of Ascended Frost/Scalebane Signet"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Circle of Ascended Frost/Scalebane Signet"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Circle of Ascended Frost/Eternal Sentry's Ring"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Circle of Ascended Frost/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Circle of Ascended Frost/Skyshard Ring"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Circle of Ascended Frost/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Circle of Ascended Frost/Ring of Frozen Rain"+=finger=,id=193731,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Circle of Ascended Frost/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Scalebane Signet/Eternal Sentry's Ring"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Scalebane Signet/Eternal Sentry's Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Scalebane Signet/Skyshard Ring"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Scalebane Signet/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Scalebane Signet/Ring of Frozen Rain"+=finger=,id=193768,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Scalebane Signet/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Eternal Sentry's Ring/Skyshard Ring"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Eternal Sentry's Ring/Skyshard Ring"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Eternal Sentry's Ring/Ring of Frozen Rain"+=finger=,id=193804,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Eternal Sentry's Ring/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
+
+profileset."Skyshard Ring/Ring of Frozen Rain"+=finger=,id=206184,gem_id=192952,enchant_id=6556,ilevel=447
+profileset."Skyshard Ring/Ring of Frozen Rain"+=finger=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447
 
