@@ -6,6 +6,7 @@
   "dependencies": {
     "@expo/spawn-async": "^1.7.2",
     "@types/node": "^20.8.4",
+    "fast-cartesian": "^8.0.0",
     "prettier": "^3.0.3",
     "ts-dedent": "^2.2.0",
     "typescript": "^5.2.2"
@@ -14,10 +15,12 @@
     "@antfu/ni": "^0.21.8",
     "@tsconfig/node-lts": "^18.12.5",
     "@tsconfig/strictest": "^2.0.2",
-    "tsx": "^3.13.0"
+    "tsx": "^3.13.0",
+    "vitest": "^0.34.6"
   },
   "scripts": {
     "generate": "nr generate:sim_data",
-    "generate:sim_data": "tsx ./scripts/generate-sim_data.ts"
+    "generate:sim_data": "tsx ./scripts/generate-sim_data.ts",
+    "test": "vitest"
   }
 }

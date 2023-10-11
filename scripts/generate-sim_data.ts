@@ -1,7 +1,6 @@
-import spawnAsync from "@expo/spawn-async";
 import { readdir } from "fs/promises";
 import { dirname, join } from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -22,5 +21,5 @@ const listConfigFiles = async () => {
 const configFiles = await listConfigFiles();
 
 for await (const configFile of configFiles) {
-  await spawnAsync("pnpm", ["exec", "tsx", configFile]);
+  await import(pathToFileURL(configFile).href);
 }

@@ -1,0 +1,26 @@
+profileset."Bile-Stained Crawg Tusks / Bile-Stained Crawg Tusks"+=main_hand=bilestained_crawg_tusks,id=159653,bonus_id=3291/6652/7981/1498/8767,enchant_id=6643
+profileset."Bile-Stained Crawg Tusks / Bile-Stained Crawg Tusks"+=off_hand=bilestained_crawg_tusks,id=159653,bonus_id=3291/6652/7981/1498/8767,enchant_id=6643
+
+profileset."Bile-Stained Crawg Tusks / Double Time"+=main_hand=bilestained_crawg_tusks,id=159653,bonus_id=3291/6652/7981/1498/8767,enchant_id=6643
+profileset."Bile-Stained Crawg Tusks / Double Time"+=off_hand=double_time,id=207991,ilevel=441,enchant_id=6643
+
+profileset."Bile-Stained Crawg Tusks / Primal Molten Warglaive"+=main_hand=bilestained_crawg_tusks,id=159653,bonus_id=3291/6652/7981/1498/8767,enchant_id=6643
+profileset."Bile-Stained Crawg Tusks / Primal Molten Warglaive"+=off_hand=primal_molten_warglaive,id=190508,ilevel=447,enchant_id=6643,crafted_stats=36/32
+
+profileset."Double Time / Bile-Stained Crawg Tusks"+=main_hand=double_time,id=207991,ilevel=441,enchant_id=6643
+profileset."Double Time / Bile-Stained Crawg Tusks"+=off_hand=bilestained_crawg_tusks,id=159653,bonus_id=3291/6652/7981/1498/8767,enchant_id=6643
+
+profileset."Double Time / Double Time"+=main_hand=double_time,id=207991,ilevel=441,enchant_id=6643
+profileset."Double Time / Double Time"+=off_hand=double_time,id=207991,ilevel=441,enchant_id=6643
+
+profileset."Double Time / Primal Molten Warglaive"+=main_hand=double_time,id=207991,ilevel=441,enchant_id=6643
+profileset."Double Time / Primal Molten Warglaive"+=off_hand=primal_molten_warglaive,id=190508,ilevel=447,enchant_id=6643,crafted_stats=36/32
+
+profileset."Primal Molten Warglaive / Bile-Stained Crawg Tusks"+=main_hand=primal_molten_warglaive,id=190508,ilevel=447,enchant_id=6643,crafted_stats=36/32
+profileset."Primal Molten Warglaive / Bile-Stained Crawg Tusks"+=off_hand=bilestained_crawg_tusks,id=159653,bonus_id=3291/6652/7981/1498/8767,enchant_id=6643
+
+profileset."Primal Molten Warglaive / Double Time"+=main_hand=primal_molten_warglaive,id=190508,ilevel=447,enchant_id=6643,crafted_stats=36/32
+profileset."Primal Molten Warglaive / Double Time"+=off_hand=double_time,id=207991,ilevel=441,enchant_id=6643
+
+profileset."Primal Molten Warglaive / Primal Molten Warglaive"+=main_hand=primal_molten_warglaive,id=190508,ilevel=447,enchant_id=6643,crafted_stats=36/32
+profileset."Primal Molten Warglaive / Primal Molten Warglaive"+=off_hand=primal_molten_warglaive,id=190508,ilevel=447,enchant_id=6643,crafted_stats=36/32
