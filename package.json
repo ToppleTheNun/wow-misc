@@ -5,15 +5,16 @@
   "type": "module",
   "dependencies": {
     "@expo/spawn-async": "^1.7.2",
-    "@tsconfig/node-lts-strictest-esm": "^18.12.1",
-    "@types/node": "^18.11.18",
-    "prettier": "^3.0.0",
+    "@types/node": "^20.8.4",
+    "prettier": "^3.0.3",
     "ts-dedent": "^2.2.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@antfu/ni": "^0.21.3",
-    "tsx": "^3.12.2"
+    "@antfu/ni": "^0.21.8",
+    "@tsconfig/node-lts": "^18.12.5",
+    "@tsconfig/strictest": "^2.0.2",
+    "tsx": "^3.13.0"
   },
   "scripts": {
     "generate": "nr generate:sim_data",
