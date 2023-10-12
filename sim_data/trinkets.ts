@@ -1,14 +1,11 @@
-import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import {
-  type Gear,
-  stringifiedPairedGearCombinations,
-} from "./utils/combinations";
+import { type Gear } from "./utils/combinations";
+import { writeGearPairSimFiles } from "./utils/sim";
 
 const __filename = fileURLToPath(import.meta.url);
 
-const trinkets: Gear[] = [
+const gear: Gear[] = [
   {
     name: "Bandolier",
     slot: "trinket1",
@@ -137,10 +134,10 @@ const trinkets: Gear[] = [
   },
 ];
 
-writeFileSync(
-  __filename.replace(".ts", ".simc"),
-  stringifiedPairedGearCombinations(trinkets),
-  {
-    encoding: "utf-8",
-  },
-);
+writeGearPairSimFiles({
+  isPtr: true,
+  actor: "t31_vengeance",
+  withoutSlots: ["trinket1", "trinket2"],
+  __filename,
+  gear,
+});

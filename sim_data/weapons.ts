@@ -1,30 +1,32 @@
-import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import {
-  type Gear,
-  stringifiedPairedGearCombinations,
-} from "./utils/combinations";
+import { type Gear, type Slot } from "./utils/combinations";
+import { type Actor } from "./actors";
+import { encounterTypes } from "./headers";
+import { writeGearPairSimFile, writeGearPairSimFiles } from "./utils/sim";
 
 const __filename = fileURLToPath(import.meta.url);
 
-const weapons: Gear[] = [
+const gear: Gear[] = [
   {
     name: "Thorncaller Claw",
     slot: "main_hand",
-    options: "thorncaller_claw,id=207784,bonus_id=7187/1520,enchant=sophic_devotion_3",
+    options:
+      "thorncaller_claw,id=207784,bonus_id=7187/1520,enchant=sophic_devotion_3",
     uniqueId: 207784,
   },
   {
     name: "Gholak",
     slot: "main_hand",
-    options: "gholak_the_final_conflagration,id=207786,bonus_id=7187/1520,enchant=sophic_devotion_3",
+    options:
+      "gholak_the_final_conflagration,id=207786,bonus_id=7187/1520,enchant=sophic_devotion_3",
     uniqueId: 207784,
   },
   {
     name: "Double Time",
     slot: "main_hand",
-    options: "double_time,id=207991,bonus_id=6536/1540/6646,enchant=sophic_devotion_3",
+    options:
+      "double_time,id=207991,bonus_id=6536/1540/6646,enchant=sophic_devotion_3",
   },
   {
     name: "Primal Molten Warglaive",
@@ -34,10 +36,10 @@ const weapons: Gear[] = [
   },
 ];
 
-writeFileSync(
-  __filename.replace(".ts", ".simc"),
-  stringifiedPairedGearCombinations(weapons),
-  {
-    encoding: "utf-8",
-  },
-);
+writeGearPairSimFiles({
+  isPtr: true,
+  actor: "t31_vengeance",
+  withoutSlots: ["main_hand", "off_hand"],
+  __filename,
+  gear,
+});

@@ -1,28 +1,30 @@
 import fastCartesian from "fast-cartesian";
 
+export type Slot =
+  | "head"
+  | "neck"
+  | "shoulder"
+  | "shoulders"
+  | "back"
+  | "chest"
+  | "wrist"
+  | "wrists"
+  | "hand"
+  | "hands"
+  | "waist"
+  | "leg"
+  | "legs"
+  | "feet"
+  | "finger1"
+  | "finger2"
+  | "trinket1"
+  | "trinket2"
+  | "main_hand"
+  | "off_hand";
+
 export type Gear = {
   name: string;
-  slot:
-    | "head"
-    | "neck"
-    | "shoulder"
-    | "shoulders"
-    | "back"
-    | "chest"
-    | "wrist"
-    | "wrists"
-    | "hand"
-    | "hands"
-    | "waist"
-    | "leg"
-    | "legs"
-    | "feet"
-    | "finger1"
-    | "finger2"
-    | "trinket1"
-    | "trinket2"
-    | "main_hand"
-    | "off_hand";
+  slot: Slot;
   options: string;
   uniqueId?: number;
 };
