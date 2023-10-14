@@ -6,8 +6,9 @@ import { Slot } from "../utils/combinations";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export const actors = ["t31_vengeance"] as const;
+export const actors = ["T31_Demon_Hunter_Vengeance"] as const;
 export type Actor = (typeof actors)[number];
+export const isActor = (s: string): s is Actor => actors.includes(s as Actor);
 
 export const actor = (name: Actor): string =>
   readFileSync(join(__dirname, `${name}.simc`), { encoding: "utf-8" });

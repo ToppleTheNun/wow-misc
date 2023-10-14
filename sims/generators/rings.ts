@@ -40,7 +40,7 @@ const gear: Gear[] = [];
 
 writeGearPairSimFiles({
   isPtr: true,
-  actor: "t31_vengeance",
+  actor: "T31_Demon_Hunter_Vengeance",
   withoutSlots: ["finger1", "finger2"],
   __filename,
   gear,
