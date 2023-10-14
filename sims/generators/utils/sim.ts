@@ -1,5 +1,5 @@
 import { writeFileSync } from "node:fs";
-import { join, basename, dirname } from "node:path";
+import { basename, dirname, join } from "node:path";
 
 import { type EncounterType, encounterTypes, headers } from "../headers";
 import { type Actor, actorWithoutSlots } from "../actors";
@@ -10,22 +10,21 @@ import {
 } from "./combinations";
 import { isPresent } from "./typeGuards";
 
-type WriteSimFileParams = {
+type WriteGearPairSimFileParams = {
   isPtr?: boolean;
   encounterType: EncounterType;
   actor: Actor;
+  modifyDefaultActor?: (actor: string) => string;
   withoutSlots: Slot[];
   outputFile: string;
-};
-
-type WriteGearPairSimFileParams = WriteSimFileParams & {
   gear: Gear[];
 };
 
 export const writeGearPairSimFile = (params: WriteGearPairSimFileParams) => {
   const header = headers[params.encounterType];
 
-  const actor = actorWithoutSlots(params.actor, params.withoutSlots);
+  const baseActor = actorWithoutSlots(params.actor, params.withoutSlots);
+  const actor = params?.modifyDefaultActor?.(baseActor) ?? baseActor;
 
   const profilesets = stringifiedPairedGearCombinations(params.gear);
 

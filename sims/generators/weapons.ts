@@ -18,7 +18,7 @@ const gear: Gear[] = [
     slot: "main_hand",
     options:
       "gholak_the_final_conflagration,id=207786,bonus_id=7187/1520,enchant=sophic_devotion_3",
-    uniqueId: 207784,
+    uniqueId: 207786,
   },
   {
     name: "Double Time",
@@ -40,4 +40,10 @@ writeGearPairSimFiles({
   withoutSlots: ["main_hand", "off_hand"],
   __filename,
   gear,
+  modifyDefaultActor: (actor) =>
+    [
+      actor,
+      "main_hand=primal_molten_warglaive,id=190508,ilevel=1,enchant=sophic_devotion_3,crafted_stats=36/32",
+      "off_hand=primal_molten_warglaive,id=190508,ilevel=1,enchant=sophic_devotion_3,crafted_stats=36/32",
+    ].join("\n"),
 });
