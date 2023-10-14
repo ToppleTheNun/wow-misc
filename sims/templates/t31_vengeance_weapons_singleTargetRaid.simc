@@ -2,8 +2,8 @@ ptr=1
 
 
 iterations=10000
-desired_targets=6
-max_time=40
+desired_targets=1
+max_time=300
 calculate_scale_factors=0
 scale_only=strength,intellect,agility,crit,mastery,vers,haste,weapon_dps,weapon_offhand_dps
 override.bloodlust=1
@@ -31,12 +31,11 @@ role=tank
 position=front
 talents=BUkAAAAAAAAAAAAAAAAAAAAAAAASiEJCJIJBkoUSCJaJSkIJkkWSSTSapEEAAAAQSCA
 
-# Default consumables
 potion=elemental_potion_of_ultimate_power_3
 flask=iced_phial_of_corrupting_rage_3
 food=fated_fortune_cookie
 augmentation=draconic
-temporary_enchant=main_hand:howling_rune_3/off_hand:howling_rune_3
+temporary_enchant=main_hand:buzzing_rune_3/off_hand:buzzing_rune_3
 
 head=screaming_torchfiends_burning_scowl,id=207263,bonus_id=7187/1520,gem_id=192919
 neck=torc_of_passed_time,id=201759,bonus_id=9500/9405/8782/8960,gem_id=192919/192919/192919,crafted_stats=36/32

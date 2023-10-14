@@ -1,14 +1,11 @@
-import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import {
-  type Gear,
-  stringifiedPairedGearCombinations,
-} from "./utils/combinations";
+import { type Gear } from "./utils/combinations";
+import { writeGearPairSimFiles } from "./utils/sim";
 
 const __filename = fileURLToPath(import.meta.url);
 
-const embellishments: Gear[] = [];
+const gear: Gear[] = [];
 
 // const gear: Gear = {
 //   "Flaring Cowl":
@@ -29,10 +26,10 @@ const embellishments: Gear[] = [];
 //     "feet=infurious_footwraps_of_indemnity,id=193455,enchant_id=6613,ilevel=447",
 // };
 
-writeFileSync(
-  __filename.replace(".ts", ".simc"),
-  stringifiedPairedGearCombinations(embellishments),
-  {
-    encoding: "utf-8",
-  },
-);
+writeGearPairSimFiles({
+  isPtr: true,
+  actor: "t31_vengeance",
+  withoutSlots: ["finger1", "finger2"],
+  __filename,
+  gear,
+});

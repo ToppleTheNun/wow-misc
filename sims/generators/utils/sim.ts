@@ -1,4 +1,5 @@
 import { writeFileSync } from "node:fs";
+import { join, basename, dirname } from "node:path";
 
 import { type EncounterType, encounterTypes, headers } from "../headers";
 import { type Actor, actorWithoutSlots } from "../actors";
@@ -45,11 +46,18 @@ export const writeGearPairSimFiles = ({
   __filename,
   ...params
 }: WriteGearPairSimFilesParams) => {
+  const baseFileName = basename(__filename);
+  const directory = dirname(__filename);
   for (const encounterType of encounterTypes) {
+    const outputFileName = [
+      params.actor,
+      baseFileName.replace(".ts", `_${encounterType}.simc`),
+    ].join("_");
+    const outputFile = join(directory, "..", "templates", outputFileName);
     writeGearPairSimFile({
       ...params,
       encounterType,
-      outputFile: __filename.replace(".ts", `_${encounterType}.simc`),
+      outputFile,
     });
   }
 };

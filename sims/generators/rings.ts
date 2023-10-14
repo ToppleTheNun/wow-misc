@@ -1,14 +1,11 @@
-import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import {
-  type Gear,
-  stringifiedPairedGearCombinations,
-} from "./utils/combinations";
+import { type Gear } from "./utils/combinations";
+import { writeGearPairSimFiles } from "./utils/sim";
 
 const __filename = fileURLToPath(import.meta.url);
 
-const rings: Gear[] = [];
+const gear: Gear[] = [];
 
 // const gear: Gear = {
 //   "Seal of Diurna's Chosen (M)":
@@ -41,10 +38,10 @@ const rings: Gear[] = [];
 //     "finger1=,id=206185,gem_id=192952,enchant_id=6556,ilevel=447",
 // };
 
-writeFileSync(
-  __filename.replace(".ts", ".simc"),
-  stringifiedPairedGearCombinations(rings),
-  {
-    encoding: "utf-8",
-  },
-);
+writeGearPairSimFiles({
+  isPtr: true,
+  actor: "t31_vengeance",
+  withoutSlots: ["finger1", "finger2"],
+  __filename,
+  gear,
+});
