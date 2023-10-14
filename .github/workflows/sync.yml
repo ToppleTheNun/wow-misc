@@ -1,0 +1,38 @@
+name: Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches: [main]
+
+permissions: read-all
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    permissions:
+      contents: write
+    steps:
+      - name: ⬇️ Checkout rep
+        uses: actions/checkout@v4
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔄 Sync Sim Data
+        run: pnpm run sims
+
+      - name: 📤 Commit and Push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "regenerate sim data"
+          add: "sims"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
