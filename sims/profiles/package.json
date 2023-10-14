@@ -1,0 +1,56 @@
+{
+  "name": "@topplethenun/wow-misc-sims-profiles",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ToppleTheNun/wow-misc.git",
+    "directory": "sims/profiles"
+  },
+  "license": "MIT",
+  "author": "Richard Harrah",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "dev": "tsup --watch",
+    "lint": "eslint src",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "update": "tsx ./scripts/update.ts"
+  },
+  "dependencies": {
+    "fast-cartesian": "8.0.0"
+  },
+  "devDependencies": {
+    "@topplethenun/eslint-config-wow-misc": "workspace:*",
+    "@topplethenun/wow-misc-tsconfig": "workspace:*",
+    "@topplethenun/wow-misc-types": "workspace:*",
+    "@types/node": "20.8.6",
+    "prettier": "3.0.3",
+    "rimraf": "5.0.5",
+    "ts-dedent": "2.2.0",
+    "tsup": "7.2.0",
+    "tsx": "3.13.0",
+    "typescript": "5.2.2",
+    "vitest": "0.34.6"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
