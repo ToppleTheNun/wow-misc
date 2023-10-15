@@ -1,14 +1,14 @@
 import { writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-
+import { fileURLToPath } from 'node:url';
+import { getSimcFilesInFlatDirectory } from '@topplethenun/wow-misc-sims-utils';
 import { format } from 'prettier';
 import { dedent } from 'ts-dedent';
-import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const t31GitHubLink = (profile: string) =>
+const t31GitHubLink = (profile: string): string =>
   `https://raw.githubusercontent.com/simulationcraft/simc/dragonflight/profiles/generators/Tier31/${profile}.simc`;
 
 const rawProfileLinks: Record<string, string> = {
@@ -35,6 +35,7 @@ for (const profileToUpdate of profilesToUpdate) {
   if (!profileToUpdateLink) {
     continue;
   }
+  // eslint-disable-next-line no-await-in-loop -- idc
   const fetchedProfile = await fetchProfile(profileToUpdateLink);
   const fetchedProfileSplit = fetchedProfile.split('\n');
 
@@ -57,36 +58,19 @@ for (const profileToUpdate of profilesToUpdate) {
   writeFileSync(fileName, profile, { encoding: 'utf-8' });
 }
 
-// Some of this bullshit is to trick rollup/TypeScript into letting us export
-// the constants that are going to be strings after bundling.
-const imports = profilesToUpdate
-  .map(
-    (profile) =>
-      `import ${profile.replaceAll('_', '')} from './${profile}.simc'`,
-  )
-  .join('\n');
-const exports = profilesToUpdate
-  .map(
-    (profile) =>
-      `export const ${profile}: string = ${profile.replaceAll('_', '')};`,
-  )
-  .join('\n');
-const profiles = profilesToUpdate.map((profile) => `'${profile}'`).join(', ');
-const profileMapping = profilesToUpdate
-  .map((profile) => `${profile},`)
-  .join('\n');
+const { imports, exports, names, mapping } =
+  getSimcFilesInFlatDirectory(directory);
 
 const rawContents = dedent`
+import { isPresent } from "@topplethenun/wow-misc-sims-utils";
 ${imports}
-import { isPresent } from "./utils";
 
 
 /* eslint-disable camelcase -- Disabling because this needs to match simc. */
 ${exports}
-
 /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 
-export const profiles = [${profiles}] as const;
+export const profiles = [${names}] as const;
 export type Profile = (typeof profiles)[number];
 export const isProfile = (s: unknown): s is Profile =>
   isPresent(s) && typeof s === "string" && profiles.includes(s as Profile);
@@ -94,8 +78,7 @@ export const isProfile = (s: unknown): s is Profile =>
 const profileMapping: Record<Profile, string> = {
   
   /* eslint-disable camelcase -- Disabling because this needs to match simc. */
-  ${profileMapping}
-  
+  ${mapping}
   /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 };
 export const getProfile = (profile: Profile): string => profileMapping[profile];

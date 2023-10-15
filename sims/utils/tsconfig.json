@@ -1,0 +1,4 @@
+{
+  "extends": ["@topplethenun/wow-misc-tsconfig/node.json"],
+  "exclude": ["dist"]
+}

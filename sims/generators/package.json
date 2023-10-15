@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ToppleTheNun/wow-misc.git",
+    "url": "https://github.com/ToppleTheNun/wow-misc",
     "directory": "sims/generators"
   },
   "license": "MIT",
@@ -27,12 +27,13 @@
     "clean": "rimraf dist",
     "dev": "tsup --watch",
     "lint": "eslint src",
-    "prepare": "tsup",
+    "prepack": "tsup",
     "test": "vitest --passWithNoTests",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@topplethenun/wow-misc-sims-profiles": "workspace:*",
+    "@topplethenun/wow-misc-sims-utils": "workspace:*",
     "fast-cartesian": "8.0.0"
   },
   "devDependencies": {

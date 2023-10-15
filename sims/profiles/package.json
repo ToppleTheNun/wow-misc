@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ToppleTheNun/wow-misc.git",
+    "url": "https://github.com/ToppleTheNun/wow-misc",
     "directory": "sims/profiles"
   },
   "license": "MIT",
@@ -27,12 +27,14 @@
     "clean": "rimraf dist",
     "dev": "tsup --watch",
     "lint": "eslint src",
-    "prepare": "tsup",
+    "prepack": "tsup",
     "test": "vitest --passWithNoTests",
     "typecheck": "tsc --noEmit",
     "update": "tsx ./scripts/update.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@topplethenun/wow-misc-sims-utils": "workspace:*"
+  },
   "devDependencies": {
     "@topplethenun/eslint-config-wow-misc": "workspace:*",
     "@topplethenun/wow-misc-tsconfig": "workspace:*",

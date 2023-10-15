@@ -1,20 +1,20 @@
 {
-  "name": "@topplethenun/wow-misc-sims-templates",
+  "name": "@topplethenun/wow-misc-sims-config",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/ToppleTheNun/wow-misc",
-    "directory": "sims/templates"
+    "directory": "sims/config"
   },
   "license": "MIT",
   "author": "Richard Harrah",
   "sideEffects": false,
   "type": "module",
   "exports": {
-    "./*": {
+    ".": {
       "import": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
@@ -35,16 +35,16 @@
   "dependencies": {
     "@topplethenun/wow-misc-sims-generators": "workspace:*",
     "@topplethenun/wow-misc-sims-profiles": "workspace:*",
-    "@topplethenun/wow-misc-sims-utils": "workspace:*"
+    "@topplethenun/wow-misc-sims-utils": "workspace:*",
+    "fast-cartesian": "8.0.0",
+    "immer": "10.0.3"
   },
   "devDependencies": {
     "@topplethenun/eslint-config-wow-misc": "workspace:*",
-    "@topplethenun/wow-misc-sims-config": "workspace:*",
     "@topplethenun/wow-misc-tsconfig": "workspace:*",
     "@topplethenun/wow-misc-tsup": "workspace:*",
     "@topplethenun/wow-misc-types": "workspace:*",
     "@types/node": "20.8.6",
-    "fast-cartesian": "8.0.0",
     "prettier": "3.0.3",
     "rimraf": "5.0.5",
     "ts-dedent": "2.2.0",

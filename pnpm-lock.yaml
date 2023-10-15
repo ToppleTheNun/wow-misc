@@ -74,11 +74,69 @@ importers:
 
   packages/types: {}
 
+  sims/config:
+    dependencies:
+      '@topplethenun/wow-misc-sims-generators':
+        specifier: workspace:*
+        version: link:../generators
+      '@topplethenun/wow-misc-sims-profiles':
+        specifier: workspace:*
+        version: link:../profiles
+      '@topplethenun/wow-misc-sims-utils':
+        specifier: workspace:*
+        version: link:../utils
+      fast-cartesian:
+        specifier: 8.0.0
+        version: 8.0.0
+      immer:
+        specifier: 10.0.3
+        version: 10.0.3
+    devDependencies:
+      '@topplethenun/eslint-config-wow-misc':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-wow-misc
+      '@topplethenun/wow-misc-tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      '@topplethenun/wow-misc-tsup':
+        specifier: workspace:*
+        version: link:../../packages/tsup
+      '@topplethenun/wow-misc-types':
+        specifier: workspace:*
+        version: link:../../packages/types
+      '@types/node':
+        specifier: 20.8.6
+        version: 20.8.6
+      prettier:
+        specifier: 3.0.3
+        version: 3.0.3
+      rimraf:
+        specifier: 5.0.5
+        version: 5.0.5
+      ts-dedent:
+        specifier: 2.2.0
+        version: 2.2.0
+      tsup:
+        specifier: 7.2.0
+        version: 7.2.0(typescript@5.2.2)
+      tsx:
+        specifier: 3.13.0
+        version: 3.13.0
+      typescript:
+        specifier: 5.2.2
+        version: 5.2.2
+      vitest:
+        specifier: 0.34.6
+        version: 0.34.6
+
   sims/generators:
     dependencies:
       '@topplethenun/wow-misc-sims-profiles':
         specifier: workspace:*
         version: link:../profiles
+      '@topplethenun/wow-misc-sims-utils':
+        specifier: workspace:*
+        version: link:../utils
       fast-cartesian:
         specifier: 8.0.0
         version: 8.0.0
@@ -112,6 +170,10 @@ importers:
         version: 0.34.6
 
   sims/profiles:
+    dependencies:
+      '@topplethenun/wow-misc-sims-utils':
+        specifier: workspace:*
+        version: link:../utils
     devDependencies:
       '@topplethenun/eslint-config-wow-misc':
         specifier: workspace:*
@@ -151,16 +213,23 @@ importers:
         version: 0.34.6
 
   sims/templates:
-    devDependencies:
-      '@topplethenun/eslint-config-wow-misc':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-wow-misc
+    dependencies:
       '@topplethenun/wow-misc-sims-generators':
         specifier: workspace:*
         version: link:../generators
       '@topplethenun/wow-misc-sims-profiles':
         specifier: workspace:*
         version: link:../profiles
+      '@topplethenun/wow-misc-sims-utils':
+        specifier: workspace:*
+        version: link:../utils
+    devDependencies:
+      '@topplethenun/eslint-config-wow-misc':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-wow-misc
+      '@topplethenun/wow-misc-sims-config':
+        specifier: workspace:*
+        version: link:../config
       '@topplethenun/wow-misc-tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -176,6 +245,48 @@ importers:
       fast-cartesian:
         specifier: 8.0.0
         version: 8.0.0
+      prettier:
+        specifier: 3.0.3
+        version: 3.0.3
+      rimraf:
+        specifier: 5.0.5
+        version: 5.0.5
+      ts-dedent:
+        specifier: 2.2.0
+        version: 2.2.0
+      tsup:
+        specifier: 7.2.0
+        version: 7.2.0(typescript@5.2.2)
+      tsx:
+        specifier: 3.13.0
+        version: 3.13.0
+      typescript:
+        specifier: 5.2.2
+        version: 5.2.2
+      vitest:
+        specifier: 0.34.6
+        version: 0.34.6
+
+  sims/utils:
+    devDependencies:
+      '@topplethenun/eslint-config-wow-misc':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-wow-misc
+      '@topplethenun/wow-misc-tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      '@topplethenun/wow-misc-tsup':
+        specifier: workspace:*
+        version: link:../../packages/tsup
+      '@topplethenun/wow-misc-types':
+        specifier: workspace:*
+        version: link:../../packages/types
+      '@types/node':
+        specifier: 20.8.6
+        version: 20.8.6
+      prettier:
+        specifier: 3.0.3
+        version: 3.0.3
       rimraf:
         specifier: 5.0.5
         version: 5.0.5
@@ -2584,6 +2695,10 @@ packages:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
     dev: true
+
+  /immer@10.0.3:
+    resolution: {integrity: sha512-pwupu3eWfouuaowscykeckFmVTpqbzW+rXFCX8rQLkZzM9ftBmU/++Ra+o+L27mz03zJTlyV4UUr+fdKNffo4A==}
+    dev: false
 
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
