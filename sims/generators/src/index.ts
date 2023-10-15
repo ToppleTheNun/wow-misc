@@ -1,4 +1,5 @@
 import { type Profile, getProfile } from '@topplethenun/wow-misc-sims-profiles';
+import { isPresent } from '@topplethenun/wow-misc-sims-utils';
 import {
   type EncounterType,
   encounterTypes,
@@ -9,7 +10,6 @@ import { profilesets as profilesetsEmbellishments } from './profilesets/embellis
 import { profilesets as profilesetsRings } from './profilesets/rings';
 import { profilesets as profilesetsTrinkets } from './profilesets/trinkets';
 import { profilesets as profilesetsWeapons } from './profilesets/weapons';
-import { isPresent } from './utils';
 
 export interface GenerateDataParams {
   profile: Profile;
@@ -105,7 +105,7 @@ const generatorMapping: Record<GeneratorName, Generator> = {
   weapons,
 };
 export const generators = Object.values(generatorMapping);
-export const generator = (name: GeneratorName): Generator =>
+export const getGeneratorByName = (name: GeneratorName): Generator =>
   generatorMapping[name];
 
 export { type EncounterType, encounterTypes, isEncounterType };
