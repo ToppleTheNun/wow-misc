@@ -1,0 +1,10 @@
+{
+  "name": "@topplethenun/eslint-config-wow-misc",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "@types/node": "20.8.6",
+    "typescript": "5.2.2"
+  }
+}
