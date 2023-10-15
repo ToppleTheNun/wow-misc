@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "ensure tooling is all happy",
+  "packageName": "@topplethenun/wow-misc-sims-templates",
+  "email": "topplethenunnery@gmail.com",
+  "dependentChangeType": "patch"
+}
