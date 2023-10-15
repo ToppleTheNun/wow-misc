@@ -27,6 +27,7 @@
     "clean": "rimraf dist",
     "dev": "tsup --watch",
     "lint": "eslint src",
+    "prepare": "tsup",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },

@@ -1,9 +1,8 @@
 name: Sync
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: '0 0 * * *'
   push:
     branches: [main]
 
@@ -16,12 +15,15 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    environment: release
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     permissions:
       contents: write
     steps:
       - name: ⬇️ Checkout rep
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: 📥 Install Dependencies via pnpm
         uses: ToppleTheNun/action-pnpm-install@v1
@@ -29,10 +31,21 @@ jobs:
       - name: 🔄 Sync Sim Data
         run: pnpm run build
 
-      - name: 📤 Commit and Push
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: "[skip ci] regenerate sim data"
-          add: "sims"
+      - name: 🐛 Set git credentials
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git remote set-url origin "https://$REPO_PAT@github.com/ToppleTheNun/wow-misc"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_PAT: ${{ secrets.REPO_PAT }}
+
+      - name: 📤 Commit and Push
+        run: |
+          git add sims
+          git commit -m "[skip ci] regenerate sim data"
+          git push
+
+      - name: 🚀 Publish to NPM
+        run: npm run release -- --token "$NPM_TOKEN"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
