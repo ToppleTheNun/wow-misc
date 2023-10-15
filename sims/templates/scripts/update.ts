@@ -63,35 +63,39 @@ import {
   isGeneratorName,
 } from '@topplethenun/wow-misc-sims-generators';
 import { type Profile } from '@topplethenun/wow-misc-sims-profiles';
-
 ${imports}
 import { snakeToPascal } from './utils';
 
+
+/* eslint-disable camelcase -- Disabling because this needs to match simc. */
 ${exports}
+
+/* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 
 export const templates = [${templateNames}] as const;
 export type Template = (typeof templates)[number];
-export const isTemplate = (s: string): s is Template =>
+export const isTemplate = (s: unknown): s is Template =>
   templates.includes(s as Template);
 
 const templateMapping: Record<Template, string> = {
+  
+  /* eslint-disable camelcase -- Disabling because this needs to match simc. */
   ${templateMapping}
+  
+  /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 };
 export const getTemplateByName = (template: Template): string =>
   templateMapping[template];
 
-type GetTemplateParams = {
+interface GetTemplateParams {
   profile: Profile;
   encounterType: EncounterType;
   generator: Generator | GeneratorName;
-};
+}
 export const getTemplate = (params: GetTemplateParams): string | undefined => {
   const generator = isGeneratorName(params.generator)
     ? getGenerator(params.generator)
     : params.generator;
-  if (!generator) {
-    return undefined;
-  }
   const possibleTemplateName = \`\${params.profile}_\${
   generator.name
 }_\${snakeToPascal(params.encounterType)}\`;

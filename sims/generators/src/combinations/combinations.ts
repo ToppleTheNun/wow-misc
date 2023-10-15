@@ -22,16 +22,16 @@ export type Slot =
   | 'main_hand'
   | 'off_hand';
 
-export type Gear = {
+export interface Gear {
   name: string;
   slot: Slot;
   options: string;
   uniqueId?: number;
-};
-export type GearPair = {
+}
+export interface GearPair {
   slot1: Gear;
   slot2: Gear;
-};
+}
 
 export const areNotSameUnique = (gearPair: GearPair): boolean => {
   if (!gearPair.slot1.uniqueId && !gearPair.slot2.uniqueId) {
@@ -46,7 +46,7 @@ export const areNotSameUnique = (gearPair: GearPair): boolean => {
   return gearPair.slot1.uniqueId !== gearPair.slot2.uniqueId;
 };
 
-export const pairedGearCombinations = (equipment: Gear[]) => {
+export const pairedGearCombinations = (equipment: Gear[]): GearPair[] => {
   return fastCartesian([equipment, equipment])
     .map<GearPair>(([slot1, slot2]) => ({
       slot1,
@@ -55,18 +55,18 @@ export const pairedGearCombinations = (equipment: Gear[]) => {
     .filter(areNotSameUnique);
 };
 
-const stringifySlot1 = (gear: Gear) =>
+const stringifySlot1 = (gear: Gear): string =>
   `${gear.slot}=${gear.options}`
     .replace('trinket2', 'trinket1')
     .replace('finger2', 'finger1')
     .replace('off_hand', 'main_hand');
-const stringifySlot2 = (gear: Gear) =>
+const stringifySlot2 = (gear: Gear): string =>
   `${gear.slot}=${gear.options}`
     .replace('trinket1', 'trinket2')
     .replace('finger1', 'finger2')
     .replace('main_hand', 'off_hand');
 
-export const stringifyGearPair = (gearPair: GearPair) => {
+export const stringifyGearPair = (gearPair: GearPair): string => {
   const profilesetName = [gearPair.slot1.name, gearPair.slot2.name].join(' / ');
   const slot1 = stringifySlot1(gearPair.slot1);
   const slot2 = stringifySlot2(gearPair.slot2);
@@ -76,8 +76,8 @@ export const stringifyGearPair = (gearPair: GearPair) => {
   ].join('\n');
 };
 
-export const stringifyGearCombinations = (gearPairs: GearPair[]) =>
+export const stringifyGearCombinations = (gearPairs: GearPair[]): string =>
   gearPairs.map(stringifyGearPair).join('\n\n');
 
-export const stringifiedPairedGearCombinations = (equipment: Gear[]) =>
+export const stringifiedPairedGearCombinations = (equipment: Gear[]): string =>
   stringifyGearCombinations(pairedGearCombinations(equipment));
