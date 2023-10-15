@@ -1,3 +1,3 @@
-import { Gear } from "../combinations/combinations";
+import type { Gear } from "../combinations/combinations";
 
 export const gear: Gear[] = [];

@@ -1,5 +1,4 @@
 import { type Profile, getProfile } from '@topplethenun/wow-misc-sims-profiles';
-
 import {
   type EncounterType,
   encounterTypes,
@@ -10,20 +9,20 @@ import { profilesets as profilesetsEmbellishments } from './profilesets/embellis
 import { profilesets as profilesetsRings } from './profilesets/rings';
 import { profilesets as profilesetsTrinkets } from './profilesets/trinkets';
 import { profilesets as profilesetsWeapons } from './profilesets/weapons';
-import { isPresent } from './utils/typeGuards';
+import { isPresent } from './utils';
 
-export type GenerateDataParams = {
+export interface GenerateDataParams {
   profile: Profile;
   encounterType: EncounterType;
   profileOverride?: (profile: string) => string;
-};
-export type GeneratedData = {
+}
+export interface GeneratedData {
   header: string;
 
   actor: string;
 
   profilesets: string;
-};
+}
 export type GenerateFn = (params: GenerateDataParams) => GeneratedData;
 export type GenerateAsStringFn = (params: GenerateDataParams) => string;
 
@@ -34,16 +33,16 @@ export const generatorNames = [
   'weapons',
 ] as const;
 export type GeneratorName = (typeof generatorNames)[number];
-export const isGeneratorName = (s: any): s is GeneratorName =>
+export const isGeneratorName = (s: unknown): s is GeneratorName =>
   isPresent(s) &&
   typeof s === 'string' &&
   generatorNames.includes(s as GeneratorName);
 
-export type Generator = {
+export interface Generator {
   name: GeneratorName;
   generate: GenerateFn;
   generateAsString: GenerateAsStringFn;
-};
+}
 
 const generateData =
   (profilesets: string): GenerateFn =>
@@ -106,6 +105,7 @@ const generatorMapping: Record<GeneratorName, Generator> = {
   weapons,
 };
 export const generators = Object.values(generatorMapping);
-export const generator = (name: GeneratorName) => generatorMapping[name];
+export const generator = (name: GeneratorName): Generator =>
+  generatorMapping[name];
 
-export { EncounterType, encounterTypes, isEncounterType };
+export { type EncounterType, encounterTypes, isEncounterType };

@@ -1,0 +1,87 @@
+name: PR
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions: read-all
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    steps:
+      - name: ⬇️ Checkout rep
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔄 Build
+        run: pnpm run build
+
+  lint:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    steps:
+      - name: ⬇️ Checkout rep
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔄 Lint
+        run: pnpm run lint
+
+  typecheck:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    steps:
+      - name: ⬇️ Checkout rep
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔄 Typecheck
+        run: pnpm run typecheck
+
+  test:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    steps:
+      - name: ⬇️ Checkout rep
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔄 Test
+        run: pnpm run test
+
+  beachball:
+    runs-on: ubuntu-latest
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    steps:
+      - name: ⬇️ Checkout rep
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔄 Beachball
+        run: pnpm run checkchange

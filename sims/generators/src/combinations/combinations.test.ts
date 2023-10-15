@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
-import { areNotSameUnique, Gear } from "./combinations";
+import type { Gear } from "./combinations";
+import { areNotSameUnique } from "./combinations";
 
 test("areNotSameUnique", () => {
   const noUniqueId: Gear = {

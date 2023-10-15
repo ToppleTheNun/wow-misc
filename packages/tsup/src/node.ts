@@ -1,8 +1,16 @@
 import type { Options } from 'tsup';
-import { base } from './base';
 
 export const node = (options: Options): Options => ({
-  ...base(options),
+  // Base stuff
+  ...options,
+  splitting: false,
+  sourcemap: true,
+  clean: !options.watch,
+  dts: true,
+  format: ['esm'],
+  publicDir: !options.publicDir,
+
+  // Node specific stuff
   platform: 'node',
   target: 'node20',
   loader: {

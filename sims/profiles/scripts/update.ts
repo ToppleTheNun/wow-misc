@@ -80,15 +80,23 @@ const rawContents = dedent`
 ${imports}
 import { isPresent } from "./utils";
 
+
+/* eslint-disable camelcase -- Disabling because this needs to match simc. */
 ${exports}
+
+/* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 
 export const profiles = [${profiles}] as const;
 export type Profile = (typeof profiles)[number];
-export const isProfile = (s: any): s is Profile =>
+export const isProfile = (s: unknown): s is Profile =>
   isPresent(s) && typeof s === "string" && profiles.includes(s as Profile);
 
 const profileMapping: Record<Profile, string> = {
+  
+  /* eslint-disable camelcase -- Disabling because this needs to match simc. */
   ${profileMapping}
+  
+  /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 };
 export const getProfile = (profile: Profile): string => profileMapping[profile];
 `;
