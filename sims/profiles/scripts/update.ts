@@ -1,14 +1,14 @@
-import { writeFileSync } from 'node:fs';
+import { readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-
+import { fileURLToPath } from 'node:url';
 import { format } from 'prettier';
 import { dedent } from 'ts-dedent';
-import { fileURLToPath } from 'url';
+import { snakeToPascal } from '../src/utils';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const t31GitHubLink = (profile: string) =>
+const t31GitHubLink = (profile: string): string =>
   `https://raw.githubusercontent.com/simulationcraft/simc/dragonflight/profiles/generators/Tier31/${profile}.simc`;
 
 const rawProfileLinks: Record<string, string> = {
@@ -35,6 +35,7 @@ for (const profileToUpdate of profilesToUpdate) {
   if (!profileToUpdateLink) {
     continue;
   }
+  // eslint-disable-next-line no-await-in-loop -- idc
   const fetchedProfile = await fetchProfile(profileToUpdateLink);
   const fetchedProfileSplit = fetchedProfile.split('\n');
 
@@ -57,24 +58,25 @@ for (const profileToUpdate of profilesToUpdate) {
   writeFileSync(fileName, profile, { encoding: 'utf-8' });
 }
 
+const simcFilesInDirectory = readdirSync(directory).filter((item) =>
+  item.endsWith('.simc'),
+);
+const simcFiles = simcFilesInDirectory.map((file) => ({
+  baseName: file.replace('.simc', ''),
+  importName: snakeToPascal(file.replace('.simc', '')),
+  fileName: file,
+}));
+
 // Some of this bullshit is to trick rollup/TypeScript into letting us export
 // the constants that are going to be strings after bundling.
-const imports = profilesToUpdate
-  .map(
-    (profile) =>
-      `import ${profile.replaceAll('_', '')} from './${profile}.simc'`,
-  )
+const imports = simcFiles
+  .map((file) => `import ${file.importName} from './${file.fileName}'`)
   .join('\n');
-const exports = profilesToUpdate
-  .map(
-    (profile) =>
-      `export const ${profile}: string = ${profile.replaceAll('_', '')};`,
-  )
+const exports = simcFiles
+  .map((file) => `export const ${file.baseName}: string = ${file.importName};`)
   .join('\n');
-const profiles = profilesToUpdate.map((profile) => `'${profile}'`).join(', ');
-const profileMapping = profilesToUpdate
-  .map((profile) => `${profile},`)
-  .join('\n');
+const profiles = simcFiles.map((file) => `'${file.baseName}'`).join(', ');
+const profileMapping = simcFiles.map((file) => `${file.baseName},`).join('\n');
 
 const rawContents = dedent`
 ${imports}
@@ -83,7 +85,6 @@ import { isPresent } from "./utils";
 
 /* eslint-disable camelcase -- Disabling because this needs to match simc. */
 ${exports}
-
 /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 
 export const profiles = [${profiles}] as const;
@@ -95,7 +96,6 @@ const profileMapping: Record<Profile, string> = {
   
   /* eslint-disable camelcase -- Disabling because this needs to match simc. */
   ${profileMapping}
-  
   /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 };
 export const getProfile = (profile: Profile): string => profileMapping[profile];

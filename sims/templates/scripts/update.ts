@@ -1,16 +1,15 @@
 import { writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-
 import { profiles } from '@topplethenun/wow-misc-sims-profiles';
 import {
   encounterTypes,
   generators,
 } from '@topplethenun/wow-misc-sims-generators';
 import fastCartesian from 'fast-cartesian';
+// eslint-disable-next-line import/no-extraneous-dependencies -- dev dependency
 import { format } from 'prettier';
 import { dedent } from 'ts-dedent';
-
 import { isPresent, snakeToPascal } from '../src/utils';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -69,7 +68,6 @@ import { snakeToPascal } from './utils';
 
 /* eslint-disable camelcase -- Disabling because this needs to match simc. */
 ${exports}
-
 /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 
 export const templates = [${templateNames}] as const;
@@ -81,7 +79,6 @@ const templateMapping: Record<Template, string> = {
   
   /* eslint-disable camelcase -- Disabling because this needs to match simc. */
   ${templateMapping}
-  
   /* eslint-enable camelcase -- Enabling because the rest does not need to match simc. */
 };
 export const getTemplateByName = (template: Template): string =>
