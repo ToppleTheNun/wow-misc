@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "ensure tooling is all happy",
-  "packageName": "@topplethenun/wow-misc-sims-profiles",
-  "email": "topplethenunnery@gmail.com",
-  "dependentChangeType": "patch"
-}
