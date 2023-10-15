@@ -10,6 +10,7 @@ import { profilesets as profilesetsEmbellishments } from './profilesets/embellis
 import { profilesets as profilesetsRings } from './profilesets/rings';
 import { profilesets as profilesetsTrinkets } from './profilesets/trinkets';
 import { profilesets as profilesetsWeapons } from './profilesets/weapons';
+import { isPresent } from './utils/typeGuards';
 
 export type GenerateDataParams = {
   profile: Profile;
@@ -33,7 +34,9 @@ export const generatorNames = [
   'weapons',
 ] as const;
 export type GeneratorName = (typeof generatorNames)[number];
-export const isGeneratorName = (s: string): s is GeneratorName =>
+export const isGeneratorName = (s: any): s is GeneratorName =>
+  isPresent(s) &&
+  typeof s === 'string' &&
   generatorNames.includes(s as GeneratorName);
 
 export type Generator = {

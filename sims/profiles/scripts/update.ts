@@ -78,13 +78,14 @@ const profileMapping = profilesToUpdate
 
 const rawContents = dedent`
 ${imports}
+import { isPresent } from "./utils";
 
 ${exports}
 
 export const profiles = [${profiles}] as const;
 export type Profile = (typeof profiles)[number];
-export const isProfile = (s: string): s is Profile =>
-  profiles.includes(s as Profile);
+export const isProfile = (s: any): s is Profile =>
+  isPresent(s) && typeof s === "string" && profiles.includes(s as Profile);
 
 const profileMapping: Record<Profile, string> = {
   ${profileMapping}

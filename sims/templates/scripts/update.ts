@@ -11,24 +11,13 @@ import fastCartesian from 'fast-cartesian';
 import { format } from 'prettier';
 import { dedent } from 'ts-dedent';
 
+import { isPresent, snakeToPascal } from '../src/utils';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const templatesToUpdate = fastCartesian([profiles, encounterTypes, generators]);
 const directory = join(__dirname, '..', 'src');
-
-const isPresent = <T>(x: T | undefined | null): x is T =>
-  x !== undefined && x !== null;
-
-const snakeToCamel = (str: string): string =>
-  str.replace(/([-_]\w)/g, (g) => g.at(1)?.toUpperCase() ?? '');
-const snakeToPascal = (str: string): string => {
-  const camel = snakeToCamel(str);
-  if (camel.length === 0) {
-    return camel;
-  }
-  return `${camel.at(0)?.toUpperCase() ?? ''}${camel.substring(1)}`;
-};
 
 const templates: string[] = [];
 for (const [profile, encounterType, generator] of templatesToUpdate) {
@@ -66,7 +55,17 @@ const templateNames = templates.map((template) => `'${template}'`).join(', ');
 const templateMapping = templates.map((template) => `${template},`).join('\n');
 
 const rawContents = dedent`
+import {
+  type EncounterType,
+  type Generator,
+  generator as getGenerator,
+  type GeneratorName,
+  isGeneratorName,
+} from '@topplethenun/wow-misc-sims-generators';
+import { type Profile } from '@topplethenun/wow-misc-sims-profiles';
+
 ${imports}
+import { snakeToPascal } from './utils';
 
 ${exports}
 
@@ -78,7 +77,30 @@ export const isTemplate = (s: string): s is Template =>
 const templateMapping: Record<Template, string> = {
   ${templateMapping}
 };
-export const getTemplate = (template: Template): string => templateMapping[template];
+export const getTemplateByName = (template: Template): string =>
+  templateMapping[template];
+
+type GetTemplateParams = {
+  profile: Profile;
+  encounterType: EncounterType;
+  generator: Generator | GeneratorName;
+};
+export const getTemplate = (params: GetTemplateParams): string | undefined => {
+  const generator = isGeneratorName(params.generator)
+    ? getGenerator(params.generator)
+    : params.generator;
+  if (!generator) {
+    return undefined;
+  }
+  const possibleTemplateName = \`\${params.profile}_\${
+  generator.name
+}_\${snakeToPascal(params.encounterType)}\`;
+  if (!isTemplate(possibleTemplateName)) {
+    return undefined;
+  }
+  return getTemplateByName(possibleTemplateName);
+};
+
 `;
 
 const formattedContents = await format(rawContents, { parser: 'typescript' });

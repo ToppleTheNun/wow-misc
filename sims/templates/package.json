@@ -31,7 +31,6 @@
     "typecheck": "tsc --declaration --emitDeclarationOnly",
     "update": "tsx ./scripts/update.ts"
   },
-  "dependencies": {},
   "devDependencies": {
     "@topplethenun/eslint-config-wow-misc": "workspace:*",
     "@topplethenun/wow-misc-sims-generators": "workspace:*",
