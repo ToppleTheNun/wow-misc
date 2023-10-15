@@ -1,4 +1,3 @@
-workspaces:
-  - "data/*"
-  - "packages/*"
-  - "sims/*"
+packages:
+  - 'packages/*'
+  - 'sims/*'

@@ -1,8 +1,10 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": ["PORT"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build", "^update"]
     },
     "test": {
       "outputs": ["coverage/**"],
@@ -21,6 +23,9 @@
     },
     "clean": {
       "cache": false
+    },
+    "update": {
+      "dependsOn": ["^update", "^build"]
     }
   }
 }

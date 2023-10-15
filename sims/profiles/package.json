@@ -31,12 +31,11 @@
     "typecheck": "tsc --noEmit",
     "update": "tsx ./scripts/update.ts"
   },
-  "dependencies": {
-    "fast-cartesian": "8.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@topplethenun/eslint-config-wow-misc": "workspace:*",
     "@topplethenun/wow-misc-tsconfig": "workspace:*",
+    "@topplethenun/wow-misc-tsup": "workspace:*",
     "@topplethenun/wow-misc-types": "workspace:*",
     "@types/node": "20.8.6",
     "prettier": "3.0.3",

@@ -1,7 +1,7 @@
 import { fileURLToPath } from "node:url";
 
-import { type Gear } from "./combinations/combinations";
-import { writeGearPairSimFiles } from "./utils/sim";
+import { type Gear } from "../combinations/combinations";
+import { writeGearPairSimFiles } from "../utils/sim";
 
 const __filename = fileURLToPath(import.meta.url);
 

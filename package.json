@@ -1,6 +1,6 @@
 {
   "name": "@topplethenun/wow-misc-monorepo",
-  "private": "true",
+  "private": true,
   "scripts": {
     "build": "turbo build",
     "clean": "turbo clean",

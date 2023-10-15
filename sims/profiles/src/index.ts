@@ -1,4 +1,6 @@
-import T31_Demon_Hunter_Vengeance from "./T31_Demon_Hunter_Vengeance.simc";
+import T31DemonHunterVengeance from "./T31_Demon_Hunter_Vengeance.simc";
+
+export const T31_Demon_Hunter_Vengeance: string = T31DemonHunterVengeance;
 
 export const profiles = ["T31_Demon_Hunter_Vengeance"] as const;
 export type Profile = (typeof profiles)[number];

@@ -57,8 +57,19 @@ for (const profileToUpdate of profilesToUpdate) {
   writeFileSync(fileName, profile, { encoding: 'utf-8' });
 }
 
+// Some of this bullshit is to trick rollup/TypeScript into letting us export
+// the constants that are going to be strings after bundling.
 const imports = profilesToUpdate
-  .map((profile) => `import ${profile} from './${profile}.simc'`)
+  .map(
+    (profile) =>
+      `import ${profile.replaceAll('_', '')} from './${profile}.simc'`,
+  )
+  .join('\n');
+const exports = profilesToUpdate
+  .map(
+    (profile) =>
+      `export const ${profile}: string = ${profile.replaceAll('_', '')};`,
+  )
   .join('\n');
 const profiles = profilesToUpdate.map((profile) => `'${profile}'`).join(', ');
 const profileMapping = profilesToUpdate
@@ -67,6 +78,8 @@ const profileMapping = profilesToUpdate
 
 const rawContents = dedent`
 ${imports}
+
+${exports}
 
 export const profiles = [${profiles}] as const;
 export type Profile = (typeof profiles)[number];
