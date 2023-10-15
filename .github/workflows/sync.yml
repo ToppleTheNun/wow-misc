@@ -32,6 +32,7 @@ jobs:
         run: pnpm run build
 
       - name: 📤 Commit and Push
+        id: commit_and_push
         uses: EndBug/add-and-commit@v9
         with:
           add: sims
@@ -39,6 +40,16 @@ jobs:
           message: '[skip ci] regenerate sim data'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📣 Notify Discord
+        uses: sarisia/actions-status-discord@v1
+        if: steps.commit_and_push.outputs.pushed == 'true'
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          nodetail: true
+          title: New `wow-misc` data pushed
+          description: |
+            Click [here](https://github.com/ToppleTheNun/wow-misc) to see!
 
       - name: 🐛 Set git credentials
         run: |
