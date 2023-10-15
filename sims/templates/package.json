@@ -29,7 +29,7 @@
     "lint": "eslint src",
     "prepare": "tsup",
     "test": "vitest",
-    "typecheck": "tsc --declaration --emitDeclarationOnly",
+    "typecheck": "tsc --noEmit",
     "update": "tsx ./scripts/update.ts"
   },
   "devDependencies": {
