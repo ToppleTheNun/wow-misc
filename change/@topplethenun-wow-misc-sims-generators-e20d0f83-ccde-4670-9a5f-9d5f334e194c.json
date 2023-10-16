@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "add ability to have configs for generation",
-  "packageName": "@topplethenun/wow-misc-sims-generators",
-  "email": "topplethenunnery@gmail.com",
-  "dependentChangeType": "patch"
-}
